@@ -16,3 +16,6 @@ This project is created with Python 3.7.3
 
 ## Setup
 To run this project, download it locally.
+
+## Functions 
+###
