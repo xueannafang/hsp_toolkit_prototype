@@ -78,6 +78,7 @@ import os
    Users can edit this form depending on their preference.
    
    *To remove an entry:*
+   
    - Select the whole row -> right click -> delete.
    - Update the number in "Group" column by dragging the first two cells to the last filled cell with "filled series" option.
    <p>
@@ -94,29 +95,28 @@ import os
    
    *To add an entry*
    
-   -First search the CAS No. of the solvent in the database (db.xlsx).
+   - First search the CAS No. of the solvent in the database (db.xlsx).
+   - Search this CAS No. in the solvent candidate list (input_solv_sel.xlsx).
    
-   -Search this CAS No. in the solvent candidate list (input_solv_sel.xlsx).
-   
-   -If it is already there:
+    - If it is already there:
    
    That means the solvent you are looking for is already a candidate. **Do not add it again.** (Repeated entries will cause crash.)
    
-   -If it is not found:
+    - If it is not found:
    
    Copy the first three cells (No., CAS, Name) in the database (db) to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
    
-   (db) -> (input_solv_sel)
+          (left: db) -> (right: input_solv_sel)
    
-   No. -> No_db
+           No. -> No_db
    
-   CAS -> CAS
+          CAS -> CAS
    
-   Name -> Solvent
+          Name -> Solvent
    
    Note that the "No_db" column is not a must to be filled, but still recommended to do so. (*See appendices for explanation.*)
    
-   -Then update the "Group" column.
+   - Then update the "Group" column.
    
    <p>
    <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_add_to_pool.png" width=500>
