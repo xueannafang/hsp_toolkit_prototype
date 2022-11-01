@@ -113,6 +113,9 @@ with guidance from
 Experimental test data is contributed by the CMP team of the Faul research group.
 
 ## Acknowledgements
+
 University of Bristol
+
 Chinese Scholarship Council
+
 Royal Society of Chemistry
