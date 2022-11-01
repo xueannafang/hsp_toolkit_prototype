@@ -19,7 +19,7 @@ These toolkits are developed with Python 3.7.3 and tested in Windows 10.
 
 The following software are required to be installed:
 
-*Python 3.7, Juypter Notebook, Microsoft Excel*
+*Python 3.7, Jupyter Notebook, Microsoft Excel*
 
 The following python packages are required to be installed:
 
@@ -36,7 +36,7 @@ The key function is to convert the target HSP into a multi-solvent list based on
 ### Set up
 
 * Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
-* Open **Solv_pred_class.ipynb** using Juypter Notebook.
+* Open **Solv_pred_class.ipynb** using Jupyter Notebook.
 
 *Please note: **HSP_SolvP.py** contains key calculation process for *Solvent Predictor*. It is imported at the first step. Please be careful to change its name.*
  
