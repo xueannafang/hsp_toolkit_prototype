@@ -15,13 +15,13 @@ Last update: 01/11/2022
 
 ## General Info
 
--These toolkits are developed with Python 3.7.3 and tested in the operating system of Windows 10.
+These toolkits are developed with Python 3.7.3 and tested in Windows 10.
 
--The following software are required to be installed:
+The following software are required to be installed:
 
 *Python 3.7, Juypter Notebook, Microsoft Excel*
 
--The following python packages are required to be installed:
+The following python packages are required to be installed:
 
 *numpy, pandas, scipy, itertools, abc, os*
 
@@ -39,6 +39,7 @@ The key function is to convert the target HSP into a multi-solvent list based on
 * Open **Solv_pred_class.ipynb** using Juypter Notebook.
 * Run the first cell:
 
+```
 import numpy as np
 import pandas as pd
 from scipy.linalg import pinv
@@ -46,7 +47,7 @@ import itertools
 import abc
 import HSP_SolvP as HSP
 import os
-
+```
 
 
 ## Contribution
