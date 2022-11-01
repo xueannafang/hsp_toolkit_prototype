@@ -37,7 +37,11 @@ The key function is to convert the target HSP into a multi-solvent list based on
 
 * Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
 * Open **Solv_pred_class.ipynb** using Juypter Notebook.
-* Run the first cell:
+* Note: **HSP_SolvP.py** contains key calculation process for *Solvent Predictor*. It is imported at the first step. Please be careful to change its name.
+* 
+# Run the code
+
+Step 1: Execute the first cell (import all the related packages). 
 
 ```
 import numpy as np
@@ -48,6 +52,7 @@ import abc
 import HSP_SolvP as HSP
 import os
 ```
+
 
 
 ## Contribution
