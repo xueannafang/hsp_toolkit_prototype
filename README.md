@@ -6,7 +6,7 @@ Last update: 01/11/2022
 * *M Locator*: Predict HSPs of the studied material based on a solubility score.
 
  <p>
-  <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png" width=1000>
+  <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/sch_sp_mloc.png" width=700>
  </p>
  
 ## Table of contents
