@@ -24,7 +24,7 @@ The key function is to convert the target HSP into a multi-solvent list based on
  
 ### Run *Solvent Predictor*
 
-**Step 1 Load all the related packages:**
+### Step 1 Load all the related packages:
 
 Execute the first cell
 ```
@@ -37,7 +37,7 @@ import HSP_SolvP as HSP
 import os
 ```
 
-**Step 2 Prepare input spreadsheets using Microsoft Excel:**
+### Step 2 Prepare input spreadsheets using Microsoft Excel:
 
 - **solvent candidates** (input_solv_sel.xlsx)
 
@@ -73,23 +73,23 @@ import os
    - First search the CAS No. of the solvent in the database (db.xlsx).
    - Search this CAS No. in the solvent candidate list (input_solv_sel.xlsx).
    
-    - If it is found:
+   **If it is found:**
    
    The solvent you are looking for is already on the list.
    
    **Do not add it again.** (Repeated entries will cause crash.)
    
-    - If it is not found:
+   **If it is not found:**
    
    Copy the first three cells (No., CAS, Name) in the database (db) spreadsheet to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
    
-          (left: db.xlsx) -> (right: input_solv_sel.xlsx)
-   
-          No. -> No_db
-   
-          CAS -> CAS
-   
-          Name -> Solvent
+   (left: db.xlsx) -> (right: input_solv_sel.xlsx)
+
+   No. -> No_db
+
+   CAS -> CAS
+
+   Name -> Solvent
    
    Note that the "No_db" column is not a must to be filled, but is still recommended to do so. (*See appendices for explanation.*) Removing this whole column will fail the calculation.
    
@@ -112,9 +112,7 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 *Experienced users can personalise the additional parameters by operating other columns of this database file and include them in DataFrame settings. (See FAQs for more discussion.)*
 
 
-**Step 3**
-
-Specify arguments in **mix_pred()** function:
+### Step 3 Specify arguments in **mix_pred()** function:
 
 
 **n**
