@@ -105,7 +105,7 @@ import os
    
     - If it is found:
    
-   Hold the fire! The solvent you are looking for is already on the list.
+   The solvent you are looking for is already on the list.
    
    **Do not add it again.** (Repeated entries will cause crash.)
    
