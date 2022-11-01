@@ -13,6 +13,7 @@ Last update: 01/11/2022
 * [General Info](#general-info)
 * [*Solvent Predictor*](#solv_pred)
 * [*M Locator*](#m_loc)
+* [FAQs](#faq)
 * [References](#ref)
 * [Contribution](#contri)
 * [Acknowledgement](#ack)
@@ -46,8 +47,9 @@ The key function is to convert the target HSP into a multi-solvent list based on
  
 ### Run *Solvent Predictor*
 
-**Step 1 Import all the related packages:**
+**Step 1 Load all the related packages:**
 
+Execute the first cell
 ```
 import numpy as np
 import pandas as pd
@@ -68,17 +70,20 @@ import os
 
  <p>
   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/input_solv_sel_example.png>
-  <em>Example of solvent candidates list<em>
  </p> 
 
 
-   Users can edit this form depending on their requirement.
+   Users can edit this form depending on their preference.
    
-   *To remove an entry*:
-   - Select the whole row and delete.
+   *To remove an entry:*
+   - Select the whole row -> right click -> delete.
    - Update the number in "Group" column.
+   <p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_rm_from_pool.png>
+ </p>
    **Note: The "Group" number must be continious integers starting from 1 to the total number of solvents.**
-   **Empty, discontinous, or overflowed numbers in "Group" column will lead to error.**
+   **Empty cell, discontinous or overflowed numbers in "Group" column will lead to error.**
+   
 
 
 **Step 3**
