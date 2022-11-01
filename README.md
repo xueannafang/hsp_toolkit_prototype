@@ -8,22 +8,26 @@
 * [*Solvent Predictor*](#solv_pred)
 * [*M Locator*](#m_loc)
 * [References](#ref)
-* Contribution(#contri)
+* [Contribution](#contri)
 * [Acknowledgement](#ack)
 
 ## General Info
 
-**version 1.0**
--This version is designed for non-coding users.
+-These toolkits are developed with Python 3.7.3 and tested in the operating system of Windows 10.
+-This version is designed for users with less coding experience.
 -Microsoft Excel is required to be installed for input/output.
--Both toolkits are developed with Python 3.7.3 and tested in the operating system of Windows 10.
+-Python 3.7 and Jupyter Notebook is required to be installed.
+
 
 ## *Solvent Predictor*
+
 Given that HSP of a solvent mixture follows a linear combination of each individual component, researchers can easily calculate the HSP of solvent systems with known components. It is however much more difficult to reverse this process.
 
-With *Solvent Predictor*, a set of HSP can be converted into a multi-solvent list based on the requirement of user.
+The aim of *Solvent Predictor* is to support the solvent suggestion when a desired goal of HSP is known.
 
-#Set up
+The key function is to convert the target HSP into a multi-solvent list based on the requirement of user.
+
+# Set up
 1. Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
 Four files are included in 
 
