@@ -36,7 +36,7 @@ The following python packages are required to be installed:
 Given that HSP of a solvent mixture follows a linear combination of each individual component, researchers can easily calculate the HSP of solvent systems with known components. It is however much more difficult to reverse this process.
 
 <p>
- <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/bg_solvpred.png" width=500>
+ <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/bg_solvpred.png" width=1000>
  </p>
 
 The aim of *Solvent Predictor* is to support the solvent suggestion when a desired goal of HSP is known.
