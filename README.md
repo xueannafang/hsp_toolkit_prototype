@@ -13,10 +13,8 @@ Last update: 01/11/2022
  
 ## Table of contents
 * [General Info](#general-info)
-* [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/blob/main/HSP_SolventPredictor/solv_pred_readme.md)
-* [*M Locator*]
+* [Documentations](#docs)
 * [Principles](#princ)
-* [FAQs](#faq)
 * [References](#ref)
 * [Contribution](#contri)
 * [Acknowledgement](#ack)
@@ -33,9 +31,9 @@ The following python packages are required to be installed:
 
 *numpy, pandas, scipy, itertools, abc, os*
 
+## Documentations
 
-## *Solvent Predictor*
-
+- [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/blob/main/HSP_SolventPredictor/solv_pred_readme.md)
 
 
 
