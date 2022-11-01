@@ -62,13 +62,24 @@ import os
 **Step 2 Prepare input spreadsheets using Microsoft Excel:**
 
 - **solvent candidates** (input_solv_sel.xlsx)
-This is the solvent pool you want to choose from.
+
+ This is the solvent pool for users to choose from.
+ 
+ Solvents appear on this list will be considered as candidates of multi-solvent systems.
 
  <p>
   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/input_solv_sel_example.png>
   <em>Example of solvent candidates list<em>
  </p> 
 
+
+   Users can edit this form depending on their requirement.
+   
+   *To remove an entry*:
+   - Select the whole row and delete.
+   - Update the number in "Group" column.
+   **Note: The "Group" number must be continious integers starting from 1 to the total number of solvents.**
+   **Empty, discontinous, or overflowed numbers in "Group" column will lead to error.**
 
 
 **Step 3**
