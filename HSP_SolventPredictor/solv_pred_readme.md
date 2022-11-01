@@ -13,7 +13,7 @@ The aim of *Solvent Predictor* is to support the solvent suggestion when a desir
 
 The key function is to convert the target HSP into a multi-solvent list based on the requirement of user.
 
-### Set up
+## Set up
 
 - Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
 - Open **Solv_pred_class.ipynb** using Jupyter Notebook.
@@ -22,7 +22,9 @@ The key function is to convert the target HSP into a multi-solvent list based on
 
 *It is imported at the first step. Please be careful to change its name.*
  
-### Run *Solvent Predictor*
+
+## Run *Solvent Predictor*
+
 
 ### Step 1 Load all the related packages:
 
@@ -166,12 +168,21 @@ sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 sp.mix_pred()
 ```
 
+### Output
+
+
+
+
+
+## Example
+
+
 
 
 
 ## Principles
 
-perturbation on target HSP
+See ref X (Manuscript in progress)
 
 
 
@@ -184,6 +195,7 @@ This is because the style of "CAS No." is text. It is just an intermediate varia
 
 
 2. How to include more parameters in the database?
+3. 
 
 
 
