@@ -7,7 +7,6 @@ Last update: 01/11/2022
 
  <p>
   <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_toolkit_scheme.png" width=1000>
-  <em> Schematics of Solvent Predictor (left) and M Locator (right) <em>
  </p>
  
 ## Table of contents
