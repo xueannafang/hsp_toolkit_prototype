@@ -116,7 +116,11 @@ import os
    
    Note that the "No_db" column is not a must to be filled, but still recommended to do so. (*See appendices for explanation.*)
    
-  
+   -Then update the "Group" column.
+   
+   <p>
+   <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_add_to_pool.png" width=500>
+   </p>
    
 
 
