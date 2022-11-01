@@ -130,9 +130,7 @@ D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters. The uni
 
 Users can add alias/abbreviations for solvents with long names, e.g., acetonitrile -> ACN, in the "alias" column.
 
-*Note that in this version, content not in the first five columns will not affect the calclation. Only to make it convenient for users to search the request entry.*
-
-   
+*Note that in this coding-beginner friendly version, content not in the first five columns will not affect the calclation. Only to make it convenient for users to search the request entry.*
 
 
 **Step 3**
