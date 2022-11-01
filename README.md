@@ -1,14 +1,6 @@
 Last update: 01/11/2022
 
-# User Guide
-
-## Table of contents
-* [Introduction](#general-info)
-* [Technologies](#tech)
-* [Documentations](#docs)
-* [References](#ref)
-* [Contribution](#contri)
-* [Acknowledgement](#ack)
+# User's Guide
 
 ## Introduction
 
