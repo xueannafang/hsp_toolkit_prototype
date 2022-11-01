@@ -15,13 +15,13 @@
 
 -These toolkits are developed with Python 3.7.3 and tested in the operating system of Windows 10.
 
--This version is designed for users with less coding experience.
+-The following software are required to be installed:
 
--Microsoft Excel is required to be installed for input/output.
+*Python 3.7, Juypter Notebook, Microsoft Excel*
 
--Python 3.7 and Jupyter Notebook is required to be installed.
+-The following python packages are required to be installed:
 
-
+*numpy, pandas, scipy, itertools, abc, os*
 
 ## *Solvent Predictor*
 
@@ -32,8 +32,20 @@ The aim of *Solvent Predictor* is to support the solvent suggestion when a desir
 The key function is to convert the target HSP into a multi-solvent list based on the requirement of user.
 
 # Set up
-1. Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
-Four files are included in 
+
+* Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
+* Open **Solv_pred_class.ipynb** using Juypter Notebook.
+* Run the first cell:
+
+import numpy as np
+import pandas as pd
+from scipy.linalg import pinv
+import itertools
+import abc
+import HSP_SolvP as HSP
+import os
+
+
 
 ## Contribution
 This project is developed by
