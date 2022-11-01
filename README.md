@@ -23,9 +23,6 @@ Predict HSPs of the studied material based on a solubility score.
  <p>
   <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/sch_sp_mloc.png" width=700>
  </p>
- 
- [a link](https://github.com/xueannafang/hsp-toolkits/blob/main/HSP_SolventPredictor/solv_pred_readme.md)
- 
 
 ## Technologies
 
