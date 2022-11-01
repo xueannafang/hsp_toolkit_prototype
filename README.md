@@ -91,6 +91,33 @@ import os
    <p>
    <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png" width=500>
    </p>
+   
+   *To add an entry*
+   
+   -First search the CAS No. of the solvent in the database (db.xlsx).
+   
+   -Search this CAS No. in the solvent candidate list (input_solv_sel.xlsx).
+   
+   -If it is already there:
+   
+   That means the solvent you are looking for is already a candidate. **Do not add it again.** (Repeated entries will cause crash.)
+   
+   -If it is not found:
+   
+   Copy the first three cells (No., CAS, Name) in the database (db) to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
+   
+   (db) -> (input_solv_sel)
+   
+   No. -> No_db
+   
+   CAS -> CAS
+   
+   Name -> Solvent
+   
+   Note that the "No_db" column is not a must to be filled, but still recommended to do so. (*See appendices for explanation.*)
+   
+  
+   
 
 
 **Step 3**
@@ -126,6 +153,24 @@ sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 sp.mix_pred()
 
 ```
+
+
+
+
+## Appendices
+
+1. What is No_db for?
+
+This is because the style of "CAS No." is text. It is just an intermediate variable to fetch the HSP data. *Solvent Predictor* will first read the input CAS No. from the solvent candidate list, and then use the CAS info to fetch the "No." of the corresponding solvent in the database. The rest of calculation is only relied on the "No." to improve the efficiency. In the output spreadsheet, the solvent name will
+
+
+
+
+
+
+
+
+
 
 
 ## Contribution
