@@ -108,13 +108,13 @@ import os
    
           (left: db) -> (right: input_solv_sel)
    
-           No. -> No_db
+          No. -> No_db
    
           CAS -> CAS
    
           Name -> Solvent
    
-   Note that the "No_db" column is not a must to be filled, but still recommended to do so. (*See appendices for explanation.*)
+   Note that the "No_db" column is not a must to be filled, but still recommended to do so. (*See appendices for explanation.*) Removing this whole column will fail the calculation.
    
    - Then update the "Group" column.
    
