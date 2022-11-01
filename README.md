@@ -132,7 +132,9 @@ D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters. The uni
 
 Users can add alias/abbreviations for solvents with long names, e.g., acetonitrile -> ACN, in the "alias" column.
 
-*Note that in this coding-beginner friendly version, content not in the first five columns will not affect the calclation. Only to make it convenient for users to search the request entry.*
+*Note that in this coding-beginner friendly version, content not in the first six columns (No., CAS, Name, D, P, H) will not affect the calclation. Only to make it convenient for users to search the request entry.*
+
+*Users can however personalise the additional functions by operating other columns of this database file and include into the DataFrame settings by changing the source code. (See FAQs for discussion.)*
 
 
 **Step 3**
@@ -172,7 +174,7 @@ sp.mix_pred()
 
 
 
-## Appendices
+## FAQs
 
 1. What is No_db for?
 
