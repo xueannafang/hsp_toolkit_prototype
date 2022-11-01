@@ -84,9 +84,10 @@ import os
  <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_rm_from_pool.png">
  </p>
  
-   **Note: The "Group" number must be continuous integers starting from 1 to the total number of solvents.**
+   *Note: The "Group" number must be continuous integers starting from 1 to the total number of solvents.*
    
-   **Empty cell, discontinuous or overflowed numbers, or wrong sequence in the "Group" column will lead to error.**
+   *Empty cell, discontinuous or overflowed numbers, or wrong sequence in the "Group" column will lead to error.*
+   
    <p>
    <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png" width=500>
    </p>
