@@ -6,7 +6,7 @@ Last update: 01/11/2022
 * *M Locator*: Predict HSPs of the studied material based on a solubility score.
 
  <p>
-  <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_toolkit_scheme.png" width=1000>
+  <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png" width=1000>
  </p>
  
 ## Table of contents
@@ -69,7 +69,7 @@ import os
  Solvents appear on this list will be considered as candidates of multi-solvent systems.
 
  <p>
-  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/input_solv_sel_example.png>
+  <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/input_solv_sel_example.png">
  </p> 
 
 
@@ -79,14 +79,14 @@ import os
    - Select the whole row -> right click -> delete.
    - Update the number in "Group" column by dragging the first two cells to the last filled cell with "filled series" option.
    <p>
- <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_rm_from_pool.png>
+ <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_rm_from_pool.png">
  </p>
  
    **Note: The "Group" number must be continuous integers starting from 1 to the total number of solvents.**
    
    **Empty cell, discontinuous or overflowed numbers, or wrong sequence in the "Group" column will lead to error.**
    <p>
-   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png>
+   <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png" width=500>
    </p>
 
 
