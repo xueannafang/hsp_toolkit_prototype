@@ -150,7 +150,6 @@ class SolvPred():
 
     def mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01):
         self.pred.run_all(n, 18.0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
-
 ```
 
 **n**
@@ -194,7 +193,6 @@ Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx) into 
 ```
 sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 sp.mix_pred()
-
 ```
 
 
