@@ -5,8 +5,7 @@ Last update: 01/11/2022
 * *Solvent Predictor*: Based on the target Hansen solubility parameters (HSPs), propose a list of multi-solvent combination.
 * *M Locator*: Predict HSPs of the studied material based on a solubility score.
 
-<img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_toolkit_scheme.png" width=100>
-![alt text](https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_toolkit_scheme.png)
+<img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_toolkit_scheme.png" width=1000>
 
 ## Table of contents
 * [General Info](#general-info)
