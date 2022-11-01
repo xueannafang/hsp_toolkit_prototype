@@ -40,9 +40,9 @@ The key function is to convert the target HSP into a multi-solvent list based on
 
 *Please note: **HSP_SolvP.py** contains key calculation process for *Solvent Predictor*. It is imported at the first step. Please be careful to change its name.*
  
-# Run the code
+# Run *Solvent Predictor*
 
-Step 1: Execute the first cell (import all the related packages). 
+Step 1: Import all the related packages.
 
 ```
 import numpy as np
@@ -53,7 +53,21 @@ import abc
 import HSP_SolvP as HSP
 import os
 ```
+Step 2: Input calculation parameters. Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx)
 
+```
+class SolvPred():
+    
+    def __init__(self, input_solv, db):
+        self.pred = HSP.SolvPredictor(input_solv, db)
+
+    def mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01):
+        self.pred.run_all(n, 18.0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
+
+sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
+sp.mix_pred()
+
+```
 
 
 ## Contribution
