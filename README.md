@@ -98,9 +98,11 @@ import os
    - First search the CAS No. of the solvent in the database (db.xlsx).
    - Search this CAS No. in the solvent candidate list (input_solv_sel.xlsx).
    
-    - If it is already there:
+    - If it is found:
    
-   That means the solvent you are looking for is already a candidate. **Do not add it again.** (Repeated entries will cause crash.)
+   Hold the fire! The solvent you are looking for is already on the list.
+   
+   **Do not add it again.** (Repeated entries will cause crash.)
    
     - If it is not found:
    
