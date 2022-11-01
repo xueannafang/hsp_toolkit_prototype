@@ -47,9 +47,7 @@ The key function is to convert the target HSP into a multi-solvent list based on
  
 ### Run *Solvent Predictor*
 
-**Step 1**
-
-Import all the related packages:
+**Step 1 Import all the related packages:**
 
 ```
 import numpy as np
@@ -61,12 +59,15 @@ import HSP_SolvP as HSP
 import os
 ```
 
-**Step 2**
-Prepare input spreadsheets using Microsoft Excel:
+**Step 2 Prepare input spreadsheets using Microsoft Excel:**
 
 - **solvent candidates** (input_solv_sel.xlsx)
 This is the solvent pool you want to choose from.
 
+ <p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/input_solv_sel_example.png>
+  <em>Example of solvent candidates list<em>
+ </p> 
 
 
 
