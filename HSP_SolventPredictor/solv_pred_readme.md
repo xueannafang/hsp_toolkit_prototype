@@ -151,7 +151,7 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 - Calculated conecentration below than this value will be filtered.
 
 
-**Step 4**
+### Step 4 Upload and run
 
 Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx) into **SolvPred()** and execute the second cell:
 
@@ -168,7 +168,7 @@ sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 sp.mix_pred()
 ```
 
-### Output
+### Step 5 Check output
 
 
 
