@@ -33,14 +33,14 @@ The aim of *Solvent Predictor* is to support the solvent suggestion when a desir
 
 The key function is to convert the target HSP into a multi-solvent list based on the requirement of user.
 
-# Set up
+### Set up
 
 * Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
 * Open **Solv_pred_class.ipynb** using Juypter Notebook.
 
 *Please note: **HSP_SolvP.py** contains key calculation process for *Solvent Predictor*. It is imported at the first step. Please be careful to change its name.*
  
-# Run *Solvent Predictor*
+### Run *Solvent Predictor*
 
 **Step 1**
 
