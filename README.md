@@ -14,9 +14,13 @@
 ## General Info
 
 -These toolkits are developed with Python 3.7.3 and tested in the operating system of Windows 10.
+
 -This version is designed for users with less coding experience.
+
 -Microsoft Excel is required to be installed for input/output.
+
 -Python 3.7 and Jupyter Notebook is required to be installed.
+
 
 
 ## *Solvent Predictor*
