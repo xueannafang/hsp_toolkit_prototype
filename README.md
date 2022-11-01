@@ -11,12 +11,12 @@ Last update: 01/11/2022
  </p>
  
 ## Table of contents
-* [General Info](#general-info)
-* [*Solvent Predictor*](#solv_pred)
-* [*M Locator*](#m_loc)
-* [References](#ref)
-* [Contribution](#contri)
-* [Acknowledgement](#ack)
+* [General Info](#general-info)*
+* [*Solvent Predictor*](#solv_pred)*
+* [*M Locator*](#m_loc)*
+* [References](#ref)*
+* [Contribution](#contri)*
+* [Acknowledgement](#ack)*
 
 ## General Info
 
