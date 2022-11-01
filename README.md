@@ -140,12 +140,14 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 **Step 3**
 Specify calculation parameters:
 
-**n**
+    - n
+    
 - maximum number of solvents in each multi-solvent combination
 - default = 2
 - must be an integer
 
-**target HSP**
+      - target HSP
+
 - contains three parameters in the order of delta_D, delta_P, delta_H
 - must be float
 
