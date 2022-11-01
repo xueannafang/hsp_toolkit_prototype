@@ -77,7 +77,7 @@ import os
    
    *To remove an entry:*
    - Select the whole row -> right click -> delete.
-   - Update the number in "Group" column.
+   - Update the number in "Group" column by dragging the first two cells to the last filled cell with "filled series" option.
    <p>
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_rm_from_pool.png>
  </p>
