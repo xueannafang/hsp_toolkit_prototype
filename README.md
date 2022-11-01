@@ -104,9 +104,9 @@ import os
    
     - If it is not found:
    
-   Copy the first three cells (No., CAS, Name) in the database (db) to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
+   Copy the first three cells (No., CAS, Name) in the database (db) spreadsheet to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
    
-          (left: db) -> (right: input_solv_sel)
+          (left: db.xlsx) -> (right: input_solv_sel.xlsx)
    
           No. -> No_db
    
@@ -114,13 +114,24 @@ import os
    
           Name -> Solvent
    
-   Note that the "No_db" column is not a must to be filled, but still recommended to do so. (*See appendices for explanation.*) Removing this whole column will fail the calculation.
+   Note that the "No_db" column is not a must to be filled, but is still recommended to do so. (*See appendices for explanation.*) Removing this whole column will fail the calculation.
    
    - Then update the "Group" column.
    
    <p>
    <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/to_add_to_pool.png" width=500>
    </p>
+   
+- **Database** (db.xlsx)
+
+This database is adapted from C. M. Hansen, Hansen solubility parameters (HSP), Second edn, 2011, vol. 118.
+
+D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters. The unit is MPa1/2
+
+Users can add alias/abbreviations for solvents with long names, e.g., acetonitrile -> ACN, in the "alias" column.
+
+*Note that in this version, content not in the first five columns will not affect the calclation. Only to make it convenient for users to search the request entry.*
+
    
 
 
@@ -138,7 +149,7 @@ Specify calculation parameters:
 
 
 
-- repeated calculation times for purturbation applied on the target HSP matrix
+- repeated calculation times for perturbation applied on the target HSP matrix
 
 
 Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx)
