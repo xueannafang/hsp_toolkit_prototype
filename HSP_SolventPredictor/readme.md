@@ -1,6 +1,6 @@
 Last update on 01/11/2022
 
-#Solvent Predictor
+# Solvent Predictor
 
 
 Given that HSP of a solvent mixture follows a linear combination of each individual component, researchers can easily calculate the HSP of solvent systems with known components. It is however much more difficult to reverse this process.
