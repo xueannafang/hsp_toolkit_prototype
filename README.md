@@ -59,7 +59,7 @@ import os
 **Step 2**
 Prepare input spreadsheets using Microsoft Excel:
 
-**solvent candidates** (input_solv_sel.xlsx)
+- **solvent candidates** (input_solv_sel.xlsx)
 This is the solvent pool you want to choose from.
 
 
@@ -74,9 +74,13 @@ Specify calculation parameters:
 - must be an integer
 
 **target HSP**
-- repeated calculation times for purturbation applied on the target HSP matrix
 - contains three parameters in the order of delta_D, delta_P, delta_H
 - must be float
+
+
+
+- repeated calculation times for purturbation applied on the target HSP matrix
+
 
 Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx)
 
