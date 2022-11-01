@@ -128,13 +128,13 @@ import os
 
 This database is adapted from C. M. Hansen, Hansen solubility parameters (HSP), Second edn, 2011, vol. 118.
 
-D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters. The unit is MPa1/2
+D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters (usually written as delta_D, delta_P, detla_H). The unit is MPa1/2
 
 Users can add alias/abbreviations for solvents with long names, e.g., acetonitrile -> ACN, in the "alias" column.
 
-*Note that in this coding-beginner friendly version, content not in the first six columns (No., CAS, Name, D, P, H) will not affect the calclation. Only to make it convenient for users to search the request entry.*
+*Note that in this beginner-friendly version, content not in the first six columns (No., CAS, Name, D, P, H) will not affect the calclation. Only to make it convenient for users to search the request entries.*
 
-*Users can however personalise the additional functions by operating other columns of this database file and include into the DataFrame settings by changing the source code. (See FAQs for discussion.)*
+*Experienced users can personalise the additional parameters by operating other columns of this database file and include them in DataFrame settings. (See FAQs for more discussion.)*
 
 
 **Step 3**
