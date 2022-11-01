@@ -229,6 +229,9 @@ perturbation on target HSP
 This is because the style of "CAS No." is text. It is just an intermediate variable to fetch the HSP data. *Solvent Predictor* will first read the input CAS No. from the solvent candidate list, and then use the CAS info to fetch the "No." of the corresponding solvent in the database. The rest of calculation is only relied on the "No." to improve the efficiency. In the output spreadsheet, the solvent name will
 
 
+2. How to include more parameters in the database?
+
+
 
 
 
