@@ -13,6 +13,7 @@ Last update: 01/11/2022
 * [General Info](#general-info)
 * [*Solvent Predictor*](#solv_pred)
 * [*M Locator*](#m_loc)
+* [Principles](#princ)
 * [FAQs](#faq)
 * [References](#ref)
 * [Contribution](#contri)
@@ -140,20 +141,40 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 **Step 3**
 Specify calculation parameters:
 
-    - n
+**n**
     
 - maximum number of solvents in each multi-solvent combination
 - default = 2
-- must be an integer
+- positive integer.
 
-      - target HSP
+**target HSP**
 
 - contains three parameters in the order of delta_D, delta_P, delta_H
-- must be float
+- Each of them must be a float.
+
+**rep_time**
+
+- repeated calculation times for perturbation applied on the target HSP matrix (*See Principles for details*)
+- default = 50
+- positive integer
+
+**std**
+
+- threshold of standard deviation of perturbation (*See Principles for details*)
+- default = 0.1
+- Standard deviation larger than this value will be filtered.
+
+**tol_pred**
+
+- tolerance of concentration deviated from the target (*See Principles for details*)
+- Calculated concentration deviate more than this value will be filtered.
 
 
+**red_tol**
 
-- repeated calculation times for perturbation applied on the target HSP matrix
+- tolerance of redundant solvent concentration (*See Principles for details*)
+- Calculated conecentration below than this value will be filtered.
+
 
 
 Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx)
@@ -172,6 +193,12 @@ sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 sp.mix_pred()
 
 ```
+
+
+
+## Principles
+
+perturbation on target HSP
 
 
 
