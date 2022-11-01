@@ -42,7 +42,9 @@ The key function is to convert the target HSP into a multi-solvent list based on
  
 # Run *Solvent Predictor*
 
-Step 1: Import all the related packages.
+**Step 1**
+
+Import all the related packages:
 
 ```
 import numpy as np
@@ -53,7 +55,30 @@ import abc
 import HSP_SolvP as HSP
 import os
 ```
-Step 2: Input calculation parameters. Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx)
+
+**Step 2**
+Prepare input spreadsheets using Microsoft Excel:
+
+**solvent candidates** (input_solv_sel.xlsx)
+This is the solvent pool you want to choose from.
+
+
+
+
+**Step 3**
+Specify calculation parameters:
+
+**n**
+- maximum number of solvents in each multi-solvent combination
+- default = 2
+- must be an integer
+
+**target HSP**
+- repeated calculation times for purturbation applied on the target HSP matrix
+- contains three parameters in the order of delta_D, delta_P, delta_H
+- must be float
+
+Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx)
 
 ```
 class SolvPred():
@@ -65,6 +90,7 @@ class SolvPred():
         self.pred.run_all(n, 18.0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
 
 sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
+
 sp.mix_pred()
 
 ```
