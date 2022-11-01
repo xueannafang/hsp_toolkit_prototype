@@ -246,12 +246,12 @@ This is because the style of "CAS No." is text. It is just an intermediate varia
 ## Contribution
 This project is developed by
 - Xue Fang (School of chemistry, University of Bristol, UK)
-- Bo Gao (School of physics, University of Bristol, UK)
 
 with guidance from
 - Prof. Charl FJ Faul (School of chemistry, University of Bristol, UK)
 - Dr Natalie Fey (School of chemistry, University of Bristol, UK)
 - Dr Ella Gale (School of chemistry, University of Bristol, UK)
+- Bo Gao (School of physics, University of Bristol, UK)
 
 Experimental test data is contributed by the CMP team of the Faul research group.
 
