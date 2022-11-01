@@ -91,7 +91,7 @@ import os
    *Empty cell, discontinuous or overflowed numbers, or wrong sequence in the "Group" column will lead to error.*
    
    <p>
-   <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png" width=1000>
+   <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_solv_sel_cm_er.png" width=500>
    </p>
    
    *To add an entry*
