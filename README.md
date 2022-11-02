@@ -43,7 +43,8 @@ Predict HSPs of the studied material based on a solubility score.
 ## References
 
 C. M. Hansen, Hansen solubility parameters: A user's handbook, 2007, Second edition.
-
+X. Fang, B. Gao, C. Faul\*, N. Fey\**, E. Gale\** (\** to be checked), Solvent Predictor - A toolkit predicting multi-solvent combinations with target Hansen solubility parameters (manuscript in progress)
+X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, B. Gao, C. Faul\*, N. Fey\**, E. Gale\** (\** to be checked), M Locator - A toolkit predicting Hansen solubility parameters for functional materials (manuscript in progress)
 
 
 ## Contribution
@@ -51,15 +52,16 @@ C. M. Hansen, Hansen solubility parameters: A user's handbook, 2007, Second edit
 This project is developed by
 
 - Xue Fang (School of chemistry, University of Bristol, UK)
+- Bo Gao (School of physics, University of Bristol, UK)
 
 with guidance from
 
-- Prof. Charl FJ Faul (School of chemistry, University of Bristol, UK)
-- Dr Natalie Fey (School of chemistry, University of Bristol, UK)
-- Dr Ella Gale (School of chemistry, University of Bristol, UK)
-- Bo Gao (School of physics, University of Bristol, UK)
+- [Prof. Charl FJ Faul](https://faulresearchgroup.com/charl-f-j-faul/) (School of chemistry, University of Bristol, UK)
+- [Dr Natalie Fey](https://feygroupchem.wordpress.com/) (School of chemistry, University of Bristol, UK)
+- [Dr Ella Gale](https://www.bristol.ac.uk/people/person/Ella-Gale-58ab10ba-8b85-4513-944e-6d9020b6ff2c/) (School of chemistry, University of Bristol, UK)
 
-Experimental test data is contributed by the CMP team of the Faul research group.
+
+Experimental test data of *M Locator* is contributed by the CMP team of the Faul research group.
 
 ## Acknowledgements
 
