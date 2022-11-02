@@ -123,6 +123,14 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 - default = 2
 - positive integer.
 
+Note that by meaning the "maximum number of solvents", it is because *Solvent Predictor* has included a validation -> filtration process to make sure the predicated concentration of each solvent is paractical enough to be used by experimental researchers.
+
+For example, a prediction of 0.01% solvent A and 99.99% Solvent B can be regarded as redundant information and can be directly replaced by neat Solvent B.
+
+That means even if a user set **n** = 2 in this case, *Sovlent Predictor* will still return one solvent in the case above.
+
+This tolerance (we call it "tolerance of redundant solvent concentration") can be either specified by users in the "**red_tol**" argument, or default set as 1%.
+
 **target HSP**
 
 - contains three parameters in the order of delta_D, delta_P, delta_H
@@ -136,13 +144,13 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 
 **std**
 
-- threshold of standard deviation of perturbation (*See Principles for details*)
+- standard deviation of the gaussian random variable applied for perturbation (*See Principles for details*)
 - default = 0.1
-- Standard deviation larger than this value will be filtered.
 
 **tol_pred**
 
-- tolerance of concentration deviated from the target (*See Principles for details*)
+- tolerance of error
+- can be regarded as concentration deviated from the target (*See Principles for details*)
 - Calculated concentration deviate more than this value will be filtered.
 
 **red_tol**
@@ -168,7 +176,7 @@ sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 sp.mix_pred()
 ```
 
-### Step 5 Check output
+## Output examples
 
 The calculation normally will be done within 1 minute. Once it has been finished, a folder named after "input_" will be created under current working directory (i.e., the place where this toolkit is run). Four output files, including two checkpoint excel spreadsheets, one log file and one final result spreadsheet, will be saved in the corresponding folder.
 
@@ -176,8 +184,36 @@ The calculation normally will be done within 1 minute. Once it has been finished
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_dir_solvp.png>
  </p>
 
+For general users, the final result (\*final_result.xlsx) and log of input parameters (\*log_SolvPredict.txt) would be of interest.
 
-## Example
+The following example is an output of dual-solvent predcition (n=2) with target HSP equals to (18.0, 1.4, 2.0)
+
+- Note that this is the HSP of toluene, which also suggests one of the potential important applications of *Solvent Predictor*, which is to find solvent replacement. (see ref X for details.)
+
+Let's look at those output files:
+
+### solv_sel_log_SolvPredict.txt
+
+In the log file, the input parameters as discussed in the previous section are stored.
+
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_log_toluene_rep.png>
+ </p>
+
+The first line: Solvent amount, equals to the input **n**.
+
+The fourth to seventh line are the original target HSP, which in this case is D = 18.0, P = 1.4, H = 2.0
+
+The next section is set up of statistical perturbation applied on the target HSP.
+
+In this case, we used the default setting (t, std) = (50, 0.1), meaning that the calculation was carried out for 50 times, with each time a different Gaussian random variable ranging from -0.1 to 0.1 applied to each element of the original target HSP.
+
+The final part is the set up for results filtration, where we specified the tolerance of error (**tol_pred**) = 1, meaning any HSP deviated more than 1 from the target will be filtered out; and the tolerance of redundant solvents (**red_tol**) remained as 0.01, meaning that concentration below 1% will be regarded as invalid.
+
+There are more filtration set up inside the main code (**HSP_SolvP.py**) that is commented directly next to the corresponding functions.
+
+-General users may not need to change those parameters and therefore it will be skipped in this documentation for clearance. Details are included in ref X.
+
 
 
 
