@@ -170,8 +170,11 @@ sp.mix_pred()
 
 ### Step 5 Check output
 
+The calculation normally will be done within 1 minute. Once it has been finished, a folder named after "input_" will be created under current working directory (i.e., the place where this toolkit is run). Four output files, including two checkpoint excel spreadsheets, one log file and one final result spreadsheet, will be saved in the corresponding folder.
 
-
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_dir_solvp.png>
+ </p>
 
 
 ## Example
@@ -184,6 +187,12 @@ sp.mix_pred()
 
 See ref X (Manuscript in progress)
 
+
+
+
+
+
+## Advanced settings
 
 
 
