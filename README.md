@@ -57,7 +57,7 @@ This project is developed by
 - [Xue Fang](https://www.linkedin.com/in/xue-fang-811204163/) (School of chemistry, University of Bristol, UK)
 - [Bo Gao](https://www.linkedin.com/in/bo-gao-771841199/) (School of physics, University of Bristol, UK)
 
-with guidance from
+with instruction from
 
 - [Prof. Charl FJ Faul](https://faulresearchgroup.com/charl-f-j-faul/) (School of chemistry, University of Bristol, UK)
 - [Dr Natalie Fey](https://feygroupchem.wordpress.com/) (School of chemistry, University of Bristol, UK)
