@@ -63,7 +63,6 @@ with guidance from
 - [Dr Natalie Fey](https://feygroupchem.wordpress.com/) (School of chemistry, University of Bristol, UK)
 - [Dr Ella Gale](https://www.bristol.ac.uk/people/person/Ella-Gale-58ab10ba-8b85-4513-944e-6d9020b6ff2c/) (School of chemistry, University of Bristol, UK)
 
-
 Experimental test data of *M Locator* is contributed by the Conjugated Microporous Polymers (CMP) team of the [Faul research group](https://faulresearchgroup.com/).
 
 ## Acknowledgements
@@ -73,3 +72,5 @@ University of Bristol
 Chinese Scholarship Council
 
 Royal Society of Chemistry
+
+The author also wants to thank all those provided inputs and technical support during the design and exploration of these toolkits.
