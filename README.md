@@ -64,7 +64,7 @@ with guidance from
 - [Dr Ella Gale](https://www.bristol.ac.uk/people/person/Ella-Gale-58ab10ba-8b85-4513-944e-6d9020b6ff2c/) (School of chemistry, University of Bristol, UK)
 
 
-Experimental test data of *M Locator* is contributed by the CMP team of the Faul research group.
+Experimental test data of *M Locator* is contributed by the CMP team of the [Faul research group](https://faulresearchgroup.com/).
 
 ## Acknowledgements
 
