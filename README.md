@@ -51,8 +51,8 @@ X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhano
 
 This project is developed by
 
-- Xue Fang (School of chemistry, University of Bristol, UK)
-- Bo Gao (School of physics, University of Bristol, UK)
+- [Xue Fang](https://www.linkedin.com/in/xue-fang-811204163/) (School of chemistry, University of Bristol, UK)
+- [Bo Gao](https://www.linkedin.com/in/bo-gao-771841199/) (School of physics, University of Bristol, UK)
 
 with guidance from
 
