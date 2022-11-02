@@ -46,7 +46,7 @@ C. M. Hansen, Hansen solubility parameters: A user's handbook, 2007, Second edit
 
 X. Fang, B. Gao, C. Faul\*, N. Fey\**, E. Gale\** (\** to be checked), Solvent Predictor - A toolkit predicting multi-solvent combinations with target Hansen solubility parameters (manuscript in progress)
 
-X. Fang, B. Gao, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. Faul\*, N. Fey\**, E. Gale\** (\** to be checked), M Locator - A toolkit predicting Hansen solubility parameters for functional materials (manuscript in progress)
+X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, B. Gao, C. Faul\*, N. Fey\**, E. Gale\** (\** to be checked), M Locator - A toolkit predicting Hansen solubility parameters for functional materials (manuscript in progress)
 
 
 
