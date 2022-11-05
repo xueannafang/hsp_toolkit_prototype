@@ -44,9 +44,9 @@ Predict HSPs of the studied material based on a solubility score.
 
 C. M. Hansen, Hansen solubility parameters: A user's handbook, 2007, Second edition.
 
-X. Fang, B. Gao, C. Faul\*, N. Fey\**, E. Gale\** (\** to be checked), Solvent Predictor - A toolkit predicting multi-solvent combinations with target Hansen solubility parameters (manuscript in progress)
+X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in progress)
 
-X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, B. Gao, C. Faul\*, N. Fey\**, E. Gale\** (\** to be checked), M Locator - A toolkit predicting Hansen solubility parameters for functional materials (manuscript in progress)
+X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, M Locator - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in progress)
 
 
 
