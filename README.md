@@ -55,7 +55,6 @@ X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhano
 This project is developed by
 
 - [Xue Fang](https://www.linkedin.com/in/xue-fang-811204163/) (School of chemistry, University of Bristol, UK)
-- [Bo Gao](https://www.linkedin.com/in/bo-gao-771841199/) (School of physics, University of Bristol, UK)
 
 with instruction from
 
@@ -67,10 +66,12 @@ Experimental test data of *M Locator* is contributed by the Conjugated Microporo
 
 ## Acknowledgements
 
-University of Bristol
+The author acknowledge the following organisations for funding this project:
 
-Chinese Scholarship Council
+- University of Bristol
+- Chinese Scholarship Council
+- Royal Society of Chemistry
 
-Royal Society of Chemistry
+The author also wants to thank all those provided inputs and technical support during the design and exploration of these toolkits, in particular:
 
-The author also wants to thank all those provided inputs and technical support during the design and exploration of these toolkits.
+- [Bo Gao](https://www.linkedin.com/in/bo-gao-771841199/) (School of physics, University of Bristol, UK)
