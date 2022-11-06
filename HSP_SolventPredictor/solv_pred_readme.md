@@ -212,6 +212,8 @@ SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 
 Here the first arugement corresponds to the solvent candidate list, and the second one is the database.
 
+The name of solvent candidate list must start with "input_" and end with ".xlsx" in this version.
+
 Note that the input spreadsheet **must be saved and closed before submitting to the tool**.
 
 - Otherwise you will see a *PermissionError* saying the permission is denied:
