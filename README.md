@@ -66,11 +66,11 @@ Experimental test data of *M Locator* is contributed by the Conjugated Microporo
 
 ## Acknowledgements
 
-The author acknowledge the following organisations for funding this project:
+The author acknowledge the following organisations for funding of this project:
 
-- University of Bristol
-- Chinese Scholarship Council
-- Royal Society of Chemistry
+- [University of Bristol](https://www.bristol.ac.uk/)
+- [Chinese Scholarship Council](https://www.chinesescholarshipcouncil.com/)
+- [Royal Society of Chemistry](https://www.rsc.org/)
 
 The author also wants to thank all those provided inputs and technical support during the design and exploration of these toolkits, in particular:
 
