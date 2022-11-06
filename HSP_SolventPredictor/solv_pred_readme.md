@@ -1,4 +1,4 @@
-Last update on 01/11/2022
+Last update on 06/11/2022
 
 # Solvent Predictor
 
@@ -13,15 +13,17 @@ The aim of *Solvent Predictor* is to support the solvent suggestion when a desir
 
 The key function is to convert the target HSP into a multi-solvent list based on the requirement of user.
 
+## Before start
+
+This version is a beginner-friendly version that does not require too much coding. However, to avoid troubles as possible, please be extra careful with
+- Changing file names of .py documents;
+- Using space or other special characters in input spreadsheets, especially in "CAS No.";
+- Editing title line of input spreadsheets.
+
 ## Set up
 
 - Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
 - Open **Solv_pred_class.ipynb** using Jupyter Notebook.
-
-*Please note: **HSP_SolvP.py** contains key calculation process for *Solvent Predictor*.*
-
-*It is imported at the first step. Please be careful to change its name.*
- 
 
 ## Run *Solvent Predictor*
 
