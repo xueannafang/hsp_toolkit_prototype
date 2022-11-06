@@ -33,15 +33,15 @@ and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) are r
 
 ## Set up
 
-- Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
+- Download the folder of [**HSP_SolventPredictor**](https://github.com/xueannafang/hsp-toolkits/tree/main/HSP_SolventPredictor) to local working directory on Windows.
 - Open **Solv_pred_class.ipynb** using Jupyter Notebook.
 
 ## Run *Solvent Predictor*
 
-
 ### Step 1 Load all the related packages:
 
-Execute the first cell
+Execute the first cell by **shift + enter**
+
 ```
 import numpy as np
 import pandas as pd
@@ -106,7 +106,7 @@ import os
 
    Name -> Solvent
    
-   Note that the "No_db" column is not a must to be filled, but is still recommended to do so. (*See appendices for explanation.*) Removing this whole column will fail the calculation.
+   Note that the "No_db" column is not a must to be filled, but is still recommended to do so. Removing this whole column will fail the calculation.
    
    - Then update the "Group" column.
    
@@ -116,9 +116,9 @@ import os
    
 - **Database** (db.xlsx)
 
-This database is adapted from C. M. Hansen, Hansen solubility parameters (HSP), Second edn, 2011, vol. 118.
+This database is adapted from [C. M. Hansen, Hansen solubility parameters (HSP), Second edn, 2011, vol. 118](https://www.taylorfrancis.com/books/mono/10.1201/9781420006834/hansen-solubility-parameters-charles-hansen).
 
-D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters (usually written as delta_D, delta_P, detla_H). The unit is MPa1/2
+D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters (usually written as delta_D, delta_P, detla_H). The unit is MPa<sup>1/2<\sup>.
 
 Users can add alias/abbreviations for solvents with long names, e.g., acetonitrile -> ACN, in the "alias" column.
 
