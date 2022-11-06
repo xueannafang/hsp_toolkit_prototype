@@ -34,7 +34,7 @@ Predict HSPs of the studied material based on a solubility score.
 
 
 - [*Solvent Predictor* (v 1.0)](https://github.com/xueannafang/hsp-toolkits/blob/main/HSP_SolventPredictor/solv_pred_readme.md)
-(Last updated on 01/11/2022)
+(Last updated on 06/11/2022)
 
 - [*M Locator* (v 1.0)]
 (Last updated on 01/11/2022)
