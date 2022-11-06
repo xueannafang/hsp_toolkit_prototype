@@ -206,6 +206,13 @@ SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 
 Here the first arugement corresponds to the solvent candidate list, and the second one is the database.
 
+Note that the input spreadsheet **must be saved and closed before submitting to the tool**. - Otherwise you will see a *PermissionError* saying the permission is denied:
+
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_perm_err_exp.png>
+ </p>
+
+
 ## Output examples
 
 The calculation normally will be done within 1 minute. Once it has been finished, a folder named "solv_sel" will be created under current working directory (i.e., the place where this toolkit is run). Four output files, including two checkpoint excel spreadsheets, one log file and one final result spreadsheet, will be saved in the corresponding folder.
@@ -240,7 +247,27 @@ In this case, we used the default setting (t, std) = (50, 0.1), meaning that the
 
 The final part is the set up for results filtration, where we specified the tolerance of error (**tol_pred**) = 1, meaning any HSP deviated more than 1 from the target will be filtered out; and the tolerance of redundant solvents (**red_tol**) remained as 0.01, meaning that concentration below 1% will be regarded as invalid.
 
-Note that the *tol_pred* and *red_tol* may need adjustment if your output file contains no results.
+
+### solv_sel_Final_result.xlsx
+
+In certain cases when the *Solvent Predictor* can not give a suggestion, which can be caused by the failure of solving linear equations, when no combinations can lead to the target HSP, you will see a warning saying **"No solvent matched. Please increase tolerance."**
+
+The whole calculation will still complete but there will be nothing shown in \*Final_result.xlsx.
+
+If this happenes, try to play around *tol_pred*, *red_tol* and add more solvent candidates.
+
+Also, think about the validation of the target HSP by looking at the following example:
+
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_no_solv_err_exp.png>
+ </p>
+
+Here the delta_D is targeted at 0, which physically means this solvent system has no contribution from dispersion (or non-polar) factor.
+
+This would be a really extreme goal for our solvent candidates, because the dispersion interaction exisits in all the solvents in the database.
+
+From the mathematical level, this means you are attempting to create a zero using a series of positive numbers, which can be regarded as an impossible mission.
+
 
 
 
