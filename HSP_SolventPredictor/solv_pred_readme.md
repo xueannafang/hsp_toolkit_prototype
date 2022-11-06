@@ -90,7 +90,7 @@ import os
    
    **If it is found:**
    
-  \t The solvent you are looking for is already on the list.
+  /t The solvent you are looking for is already on the list.
    
   \t  **Do not add it again.** (Repeated entries will cause crash.)
    
