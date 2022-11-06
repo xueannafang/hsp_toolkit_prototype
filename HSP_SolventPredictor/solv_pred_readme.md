@@ -206,7 +206,6 @@ SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 
 Here the first arugement corresponds to the solvent candidate list, and the second one is the database.
 
-
 ## Output examples
 
 The calculation normally will be done within 1 minute. Once it has been finished, a folder named "solv_sel" will be created under current working directory (i.e., the place where this toolkit is run). Four output files, including two checkpoint excel spreadsheets, one log file and one final result spreadsheet, will be saved in the corresponding folder.
@@ -219,7 +218,7 @@ For general users, the final result (\*final_result.xlsx) and log of input param
 
 The following example is an output of dual-solvent predcition (n=2) with target HSP equals to (18.0, 1.4, 2.0)
 
-- Note that this is the HSP of toluene, which also suggests one of the potential important applications of *Solvent Predictor*, which is to find solvent replacement. (see ref X for details.)
+- Note that this is the HSP of toluene, which also suggests one of the potential important applications of *Solvent Predictor*, that is to find solvent replacement. 
 
 Let's look at those output files:
 
@@ -231,51 +230,22 @@ In the log file, the input parameters as discussed in the previous section are s
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_log_toluene_rep.png>
  </p>
 
-The first line: Solvent amount, equals to the input **n**.
+The first line: "Solvent amount", equals to the input **n**.
 
 The fourth to seventh line are the original target HSP, which in this case is D = 18.0, P = 1.4, H = 2.0
 
 The next section is set up of statistical perturbation applied on the target HSP.
 
-In this case, we used the default setting (t, std) = (50, 0.1), meaning that the calculation was carried out for 50 times, with each time a different Gaussian random variable ranging from -0.1 to 0.1 applied to each element of the original target HSP.
+In this case, we used the default setting (t, std) = (50, 0.1), meaning that the calculation was carried out for 50 times, with each time a different Gaussian random variable with standard deviation equals to 0.1 applied to each element of the original target HSP.
 
 The final part is the set up for results filtration, where we specified the tolerance of error (**tol_pred**) = 1, meaning any HSP deviated more than 1 from the target will be filtered out; and the tolerance of redundant solvents (**red_tol**) remained as 0.01, meaning that concentration below 1% will be regarded as invalid.
 
-There are more filtration set up inside the main code (**HSP_SolvP.py**) that is commented directly next to the corresponding functions.
-
--General users may not need to change those parameters and therefore it will be skipped in this documentation for clearance. Details are included in ref X.
-
-
-
-
 Note that the *tol_pred* and *red_tol* may need adjustment if your output file contains no results.
+
+
 
 ## Principles
 
 See ref X (Manuscript in progress)
-
-
-
-
-
-
-## Advanced settings
-
-
-
-## FAQs
-
-1. What is No_db for?
-
-This is because the style of "CAS No." is text. It is just an intermediate variable to fetch the HSP data. *Solvent Predictor* will first read the input CAS No. from the solvent candidate list, and then use the CAS info to fetch the "No." of the corresponding solvent in the database. The rest of calculation is only relied on the "No." to improve the efficiency. In the output spreadsheet, the solvent name will
-
-
-2. How to include more parameters in the database?
-3. 
-
-
-
-
-
 
 
