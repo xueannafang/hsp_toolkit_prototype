@@ -220,6 +220,7 @@ Note that the input spreadsheet **must be saved and closed before submitting to 
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_perm_err_exp.png>
  </p>
 
+(The error information does look scary but you only need to look at the **last line**, which tells you to **close the "db.xlsx" in excel and try again**.)
 
 ## Output examples
 
@@ -259,7 +260,7 @@ The final part is the set up for results filtration, where we specified the tole
 ### solv_sel_Final_result.xlsx
 
 
-## Troubleshooting
+**Troubleshooting**
 
 In certain cases when the *Solvent Predictor* can not give a suggestion, which can be caused by the failure of solving linear equations, when no combinations can lead to the target HSP, you will see a warning saying **"No solvent matched. Please increase tolerance."**
 
