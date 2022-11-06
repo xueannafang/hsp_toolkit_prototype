@@ -129,11 +129,11 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 
 ### Step 3 Specify arguments in **self.pred.run_all()** function:
 
+**self.pred.run_all()** contains eight arguments: *n, delta_D, delta_P, delta_H, rep_time, std, tol_pred, red_tol*,
+
 ```
 self.pred.run_all(n, 0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
 ```
-
-**self.pred.run_all()** contains eight arguments: *n, delta_D, delta_P, delta_H, rep_time, std, tol_pred, red_tol*,
 
 where the default values of *n, rep_time, std, tol_pred, red_tol* are set as *2, 50, 0.1, 1, 0.01*, respectively, as shown in
 
@@ -220,7 +220,7 @@ Note that the input spreadsheet **must be saved and closed before submitting to 
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_perm_err_exp.png>
  </p>
 
-(The error information does look scary but you only need to look at the **last line**, which tells you to **close the "db.xlsx" in excel and try again**.)
+The error information does look scary, but all you need to do is to look at the **last line**, which kindly asks you to **close the "db.xlsx" in excel and try again**.
 
 ## Output examples
 
