@@ -16,7 +16,7 @@ The key function is to convert the target HSP into a multi-solvent list based on
 ## Before start
 
 This version is a beginner-friendly version that does not require too much coding. However, to avoid troubles as possible, please be extra careful with
-- Changing file names of .py documents;
+- Removing or changing file names of .py documents;
 - Using space or other special characters in input spreadsheets, especially in "CAS No.";
 - Editing title line of input spreadsheets.
 
