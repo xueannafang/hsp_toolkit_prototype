@@ -175,8 +175,9 @@ This tolerance (we call it "tolerance of redundant solvent concentration") can b
 
 **red_tol**
 
-- tolerance of redundant solvent concentration (*See Principles for details*)
+- tolerance of redundant solvent concentration
 - Calculated conecentration below than this value will be filtered.
+
 
 ### Step 4 Upload and run
 
@@ -204,6 +205,7 @@ SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 ```
 
 Here the first arugement corresponds to the solvent candidate list, and the second one is the database.
+
 
 ## Output examples
 
@@ -246,7 +248,7 @@ There are more filtration set up inside the main code (**HSP_SolvP.py**) that is
 
 
 
-
+Note that the *tol_pred* and *red_tol* may need adjustment if your output file contains no results.
 
 ## Principles
 
