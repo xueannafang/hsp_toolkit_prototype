@@ -20,6 +20,15 @@ This version is a beginner-friendly version that does not require too much codin
 - Using space or other special characters in input spreadsheets, especially in "CAS No.";
 - Editing title line of input spreadsheets.
 
+[Python](https://www.python.org/),
+[Jupyter notebook](https://jupyter.org/)
+and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) are required to be installed before using this tool.
+
+[numpy](https://numpy.org/),
+[pandas](https://pandas.pydata.org/), and
+[scipy](https://docs.scipy.org/doc/) are required to be installed in python.
+
+
 ## Set up
 
 - Download the folder of **HSP_SolventPredictor** to local working directory on Windows.
