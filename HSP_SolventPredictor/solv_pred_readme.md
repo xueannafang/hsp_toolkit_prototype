@@ -350,9 +350,8 @@ If we look back at the figure shown in the beginning, we will notice that the HS
 
 
 
+## References
 
-## Principles
-
-See ref X (Manuscript in progress)
+X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)
 
 
