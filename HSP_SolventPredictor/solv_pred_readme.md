@@ -90,21 +90,21 @@ import os
    
    **If it is found:**
    
-   The solvent you are looking for is already on the list.
+  \t The solvent you are looking for is already on the list.
    
-   **Do not add it again.** (Repeated entries will cause crash.)
+  \t  **Do not add it again.** (Repeated entries will cause crash.)
    
    **If it is not found:**
    
-   Copy the first three cells (No., CAS, Name) in the database (db) spreadsheet to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
+  \t Copy the first three cells (No., CAS, Name) in the database (db) spreadsheet to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
    
-   (left: db.xlsx) -> (right: input_solv_sel.xlsx)
+  \t (left: db.xlsx) -> (right: input_solv_sel.xlsx)
 
-   No. -> No_db
+  \t  No. -> No_db
 
-   CAS -> CAS
+   \t CAS -> CAS
 
-   Name -> Solvent
+   \t Name -> Solvent
    
    Note that the "No_db" column is not a must to be filled, but is still recommended to do so for development purpose. (Removing this whole column will however fail the calculation.)
    
@@ -275,7 +275,7 @@ where the first two (or **n**) columns, "Solvent 1", "Solvent 2", are solvent na
 
 The next two  (or **n**) columns are the predicted concentrations of the corresponding solvent.
 
-- "c_mean_#" is the concentration of "solvent #"
+- "c_mean#" is the concentration of "solvent #"
 
 The next three columns, "e_mean_D", "e_mean_P", "e_mean_H", are absolute errors of calculated HSP from target HSP;
 
@@ -292,7 +292,7 @@ Users can determine whether to format those numbers into a more organised way:
 
 **Example of redundant solvents**
 
-By looking at the fourth row in the above case, we can find the neat toluene, which is the expected outcome happened after the redundant solvent filtration.
+By looking at the fourth row in the \*Final_result.xlsx, we can find the neat toluene, which is the expected outcome happened after the redundant solvent filtration.
 
 As we mentioned before, this set of target HSP is exactly the one for toluene. Toluene is however also included in the solvent candidate list (input_solv_sel.xlsx)
 
@@ -344,7 +344,7 @@ Here the delta_D is targeted at 0, which physically means this solvent system ha
 
 This would be a really extreme goal for our solvent candidates, because the dispersion interaction exisits in all the solvents in the database.
 
-From the mathematical level, this means you are attempting to create a zero using a series of positive numbers, which can be regarded as an impossible mission.
+From the mathematical level, this means you are attempting to create a zero by adding up a series of positive numbers, which can be regarded as an impossible mission.
 
 If we look back at the figure shown in the beginning, we will notice that the HSP limit of all the potential solvent combinations is eventually restricted by the HSP of neat solvent candidates. Therefore, when setting the target, we also need to keep in mind that the region connected by all the neat solvent candidate in the Hansen space must cover this target. Otherwise the target would not be achievable.
 
