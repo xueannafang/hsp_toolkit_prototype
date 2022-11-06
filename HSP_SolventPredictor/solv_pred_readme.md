@@ -214,11 +214,15 @@ SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 
 Here the first arugement corresponds to the solvent candidate list, and the second one is the database.
 
-Note that the input spreadsheet **must be saved and closed before submitting to the tool**. - Otherwise you will see a *PermissionError* saying the permission is denied:
+Note that the input spreadsheet **must be saved and closed before submitting to the tool**.
+
+- Otherwise you will see a *PermissionError* saying the permission is denied:
 
 <p>
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_perm_err_exp.png>
  </p>
+
+This is what happened when I attempted to run this cell with "db.xlsx" open in excel.
 
 The error information does look scary, but all you need to do is to look at the **last line**, which kindly asks you to **close the "db.xlsx" in excel and try again**.
 
@@ -260,6 +264,23 @@ The final part is the set up for results filtration, where we specified the tole
 ### solv_sel_Final_result.xlsx
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **Troubleshooting**
 
 In certain cases when the *Solvent Predictor* can not give a suggestion, which can be caused by the failure of solving linear equations, when no combinations can lead to the target HSP, you will see a warning saying **"No solvent matched. Please increase tolerance."**
@@ -274,28 +295,19 @@ If this happenes, try to increase the *tol_pred* or add more solvent candidates.
 
 Here the tolerance of error was set as 0.0001, which would be too strict to give a valid result.
 
-Also, think about how reasonable is the target HSP by looking at the following example:
+Also, think about how reasonable is the target HSP by looking at the following set up:
 
 ```
-class SolvPred():
-    
-    def __init__(self, input_solv, db):
-        self.pred = HSP.SolvPredictor(input_solv, db)
-
-    def mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01):
-        self.pred.run_all(n, 0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
-
-sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
-
-sp.mix_pred()
+self.pred.run_all(n, 0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
 ```
-
 
 Here the delta_D is targeted at 0, which physically means this solvent system has no contribution from dispersion (or non-polar) factor.
 
 This would be a really extreme goal for our solvent candidates, because the dispersion interaction exisits in all the solvents in the database.
 
 From the mathematical level, this means you are attempting to create a zero using a series of positive numbers, which can be regarded as an impossible mission.
+
+If we look back at the figure shown in the beginning, we will notice that the HSP limit of all the potential solvent combinations is eventually restricted by the HSP of neat solvent candidates. Therefore, by setting the target, we also need to keep in mind that the region connected by all the neat solvent candidate in the Hansen space must cover this target. Otherwise the target would not be achievable.
 
 
 
