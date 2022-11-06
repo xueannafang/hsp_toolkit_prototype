@@ -283,9 +283,30 @@ Column "D", "P", "H" are the calculated HSP from each solvent combinations;
 
 The last two (or **n**) columns are the index of corresponding solvent conponent in the database (db).
 
+Users can determine whether to format those numbers into a more organised way:
+
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_perct_dec.png>
+ </p>
 
 
+**Example of redundant solvents**
 
+By looking at the fourth row in the above case, we can find the neat toluene, which is the expected outcome happened after the redundant solvent filtration.
+
+As we mentioned before, this set of target HSP is exactly the one for toluene. Toluene is however also included in the solvent candidate list (input_solv_sel.xlsx)
+
+By specifying the **red_tol** parameter as 0.01 during the input stage, we asked *Solvent Predictor* to filter all the solvents whose concentration is below 1%.
+
+Therefore, when the toolkit iterates through the candidate list, it could first give a dual-solvent results of toluene + another solvent (but with extremely low concentration), which in this case, this second solvent is No. 234 (triethylamine).
+
+Once the first rough results have been generated, *Solvent Predictor* will filter out the unnecessary solvents, followed by a renormalisation of total concentration, to make sure it is 100% again.
+
+This also works for more than two solvents situation. See the next trinary systems (**n** = 3) example:
+
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_red_exp_dmf.png>
+ </p>
 
 
 
