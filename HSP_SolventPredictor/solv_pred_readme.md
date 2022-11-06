@@ -106,7 +106,7 @@ import os
 
    Name -> Solvent
    
-   Note that the "No_db" column is not a must to be filled, but is still recommended to do so. Removing this whole column will fail the calculation.
+   Note that the "No_db" column is not a must to be filled, but is still recommended to do so for development purpose. (Removing this whole column will however fail the calculation.)
    
    - Then update the "Group" column.
    
@@ -124,11 +124,18 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 
 *Note that in this beginner-friendly version, content not in the first six columns (No., CAS, Name, D, P, H) will not affect the calclation. Only to make it convenient for users to search the request entries.*
 
-*Experienced users can personalise the additional parameters by operating other columns of this database file and include them in DataFrame settings. (See FAQs for more discussion.)*
+*Experienced users can personalise the additional parameters by operating other columns of this database file and include them in DataFrame settings.*
 
 
 ### Step 3 Specify arguments in **mix_pred()** function:
 
+```
+mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01)
+```
+
+**mix_pred()** contains six arguments: *self, n, rep_time, std, tol_pred, red_tol*.
+
+Please do not change the sequence of them or remove any item. (The first one, **self**, does not need any modification - just leave it there.)
 
 **n**
     
@@ -151,19 +158,19 @@ This tolerance (we call it "tolerance of redundant solvent concentration") can b
 
 **rep_time**
 
-- repeated calculation times for perturbation applied on the target HSP matrix (*See Principles for details*)
+- repeated calculation times for perturbation applied on the target HSP matrix
 - default = 50
 - positive integer
 
 **std**
 
-- standard deviation of the gaussian random variable applied for perturbation (*See Principles for details*)
+- standard deviation of the gaussian random variable applied for perturbation
 - default = 0.1
 
 **tol_pred**
 
 - tolerance of error
-- can be regarded as concentration deviated from the target (*See Principles for details*)
+- can be regarded as concentration deviated from the target
 - Calculated concentration deviate more than this value will be filtered.
 
 **red_tol**
@@ -171,10 +178,9 @@ This tolerance (we call it "tolerance of redundant solvent concentration") can b
 - tolerance of redundant solvent concentration (*See Principles for details*)
 - Calculated conecentration below than this value will be filtered.
 
-
 ### Step 4 Upload and run
 
-Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx) into **SolvPred()** and execute the second cell:
+Upload solvent candidate list (input_solv_sel.xlsx) and database (db.xlsx) into **SolvPred()** and execute the calculation cell:
 
 ```
 class SolvPred():
@@ -189,9 +195,19 @@ sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 sp.mix_pred()
 ```
 
+Please note, if you did not change the name of the two input spreadsheets, you can directly run the above code.
+
+Otherwise you need to update the file name in
+
+```
+SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
+```
+
+Here the first arugement corresponds to the solvent candidate list, and the second one is the database.
+
 ## Output examples
 
-The calculation normally will be done within 1 minute. Once it has been finished, a folder named after "input_" will be created under current working directory (i.e., the place where this toolkit is run). Four output files, including two checkpoint excel spreadsheets, one log file and one final result spreadsheet, will be saved in the corresponding folder.
+The calculation normally will be done within 1 minute. Once it has been finished, a folder named "solv_sel" will be created under current working directory (i.e., the place where this toolkit is run). Four output files, including two checkpoint excel spreadsheets, one log file and one final result spreadsheet, will be saved in the corresponding folder.
 
 <p>
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_dir_solvp.png>
