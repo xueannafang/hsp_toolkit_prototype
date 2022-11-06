@@ -127,15 +127,23 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 *Experienced users can personalise the additional parameters by operating other columns of this database file and include them in DataFrame settings.*
 
 
-### Step 3 Specify arguments in **mix_pred()** function:
+### Step 3 Specify arguments in **self.pred.run_all()** function:
 
 ```
-mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01)
+self.pred.run_all(n, 0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
 ```
 
-**mix_pred()** contains six arguments: *self, n, rep_time, std, tol_pred, red_tol*.
+**self.pred.run_all()** contains eight arguments: *n, delta_D, delta_P, delta_H, rep_time, std, tol_pred, red_tol*,
+
+where the default values of *n, rep_time, std, tol_pred, red_tol* are set as *2, 50, 0.1, 1, 0.01*, respectively, as shown in
+
+```
+def mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01):
+```
 
 Please do not change the sequence of them or remove any item. (The first one, **self**, does not need any modification - just leave it there.)
+
+Here is an explanation of each argument:
 
 **n**
     
@@ -250,17 +258,37 @@ The final part is the set up for results filtration, where we specified the tole
 
 ### solv_sel_Final_result.xlsx
 
+
+## Troubleshooting
+
 In certain cases when the *Solvent Predictor* can not give a suggestion, which can be caused by the failure of solving linear equations, when no combinations can lead to the target HSP, you will see a warning saying **"No solvent matched. Please increase tolerance."**
 
-The whole calculation will still complete but there will be nothing shown in \*Final_result.xlsx.
-
-If this happenes, try to play around *tol_pred*, *red_tol* and add more solvent candidates.
-
-Also, think about the validation of the target HSP by looking at the following example:
+The whole calculation will still be completed but there will be nothing shown in \*Final_result.xlsx.
 
 <p>
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_no_solv_err_exp.png>
  </p>
+
+If this happenes, try to increase the *tol_pred* or add more solvent candidates.
+
+Here the tolerance of error was set as 0.0001, which would be too strict to give a valid result.
+
+Also, think about how reasonable is the target HSP by looking at the following example:
+
+```
+class SolvPred():
+    
+    def __init__(self, input_solv, db):
+        self.pred = HSP.SolvPredictor(input_solv, db)
+
+    def mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01):
+        self.pred.run_all(n, 0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
+
+sp = SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
+
+sp.mix_pred()
+```
+
 
 Here the delta_D is targeted at 0, which physically means this solvent system has no contribution from dispersion (or non-polar) factor.
 
