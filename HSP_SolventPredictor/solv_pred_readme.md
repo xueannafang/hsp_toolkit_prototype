@@ -286,7 +286,7 @@ The last two (or **n**) columns are the index of corresponding solvent conponent
 Users can determine whether to format those numbers into a more organised way:
 
 <p>
- <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_perct_dec.png>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_perct_dec.png width=500>
  </p>
 
 
