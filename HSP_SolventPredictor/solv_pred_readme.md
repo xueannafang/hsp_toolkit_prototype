@@ -118,7 +118,7 @@ import os
 
 This database is adapted from [C. M. Hansen, Hansen solubility parameters (HSP), Second edn, 2011, vol. 118](https://www.taylorfrancis.com/books/mono/10.1201/9781420006834/hansen-solubility-parameters-charles-hansen).
 
-D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters (usually written as delta_D, delta_P, detla_H). The unit is MPa<sup>1/2<\sup>.
+D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters (usually written as delta_D, delta_P, detla_H). The unit is MPa<sup>1/2</sup>.
 
 Users can add alias/abbreviations for solvents with long names, e.g., acetonitrile -> ACN, in the "alias" column.
 
