@@ -263,7 +263,25 @@ The final part is the set up for results filtration, where we specified the tole
 
 ### solv_sel_Final_result.xlsx
 
+This is the most imporatne output that the user should read.
 
+Here is part of the output spreadsheet of the previous submission:
+
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_f_r.png>
+ </p>
+
+where the first two (or **n**) columns, "Solvent 1", "Solvent 2", are solvent names;
+
+The next two  (or **n**) columns are the predicted concentrations of the corresponding solvent.
+
+- "c_mean_#" is the concentration of "solvent #"
+
+The next three columns, "e_mean_D", "e_mean_P", "e_mean_H", are absolute errors of calculated HSP from target HSP;
+
+Column "D", "P", "H" are the calculated HSP from each solvent combinations;
+
+The last two (or **n**) columns are the index of corresponding solvent conponent in the database (db).
 
 
 
@@ -307,7 +325,7 @@ This would be a really extreme goal for our solvent candidates, because the disp
 
 From the mathematical level, this means you are attempting to create a zero using a series of positive numbers, which can be regarded as an impossible mission.
 
-If we look back at the figure shown in the beginning, we will notice that the HSP limit of all the potential solvent combinations is eventually restricted by the HSP of neat solvent candidates. Therefore, by setting the target, we also need to keep in mind that the region connected by all the neat solvent candidate in the Hansen space must cover this target. Otherwise the target would not be achievable.
+If we look back at the figure shown in the beginning, we will notice that the HSP limit of all the potential solvent combinations is eventually restricted by the HSP of neat solvent candidates. Therefore, when setting the target, we also need to keep in mind that the region connected by all the neat solvent candidate in the Hansen space must cover this target. Otherwise the target would not be achievable.
 
 
 
