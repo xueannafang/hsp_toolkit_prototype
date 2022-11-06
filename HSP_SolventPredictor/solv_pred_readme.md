@@ -88,23 +88,22 @@ import os
    - First search the CAS No. of the solvent in the database (db.xlsx).
    - Search this CAS No. in the solvent candidate list (input_solv_sel.xlsx).
    
-   **If it is found:**
+  **If it is found:**
    
-  /t The solvent you are looking for is already on the list.
-   
-  \t  **Do not add it again.** (Repeated entries will cause crash.)
+   - The solvent you are looking for is already on the list.
+   - **Do not add it again.** (Repeated entries will cause crash.)
    
    **If it is not found:**
    
-  \t Copy the first three cells (No., CAS, Name) in the database (db) spreadsheet to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
-   
-  \t (left: db.xlsx) -> (right: input_solv_sel.xlsx)
+   - Copy the first three cells (No., CAS, Name) in the database (db) spreadsheet to the corresponding cells (No_db, CAS, Solvent) in the candidate list.
 
-  \t  No. -> No_db
+     (left: db.xlsx) -> (right: input_solv_sel.xlsx)
 
-   \t CAS -> CAS
+     No. -> No_db
 
-   \t Name -> Solvent
+     CAS -> CAS
+
+     Name -> Solvent
    
    Note that the "No_db" column is not a must to be filled, but is still recommended to do so for development purpose. (Removing this whole column will however fail the calculation.)
    
