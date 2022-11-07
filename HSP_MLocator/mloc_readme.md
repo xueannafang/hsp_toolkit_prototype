@@ -6,7 +6,7 @@ Last update on 07/11/2022
 
 The solubility indicator applied in this version is based on UV-Vis spectroscoy features.
 
-The studied materials in this case are based on conjugated microporous polymers (CMP).
+The studied materials in this case are based on [conjugated microporous polymers (CMP)](https://www.sciencedirect.com/topics/engineering/conjugated-microporous-polymer).
 
 
 
