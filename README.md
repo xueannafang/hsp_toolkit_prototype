@@ -42,7 +42,11 @@ The author also thanks all who have provided inputs and technical support during
 
 - [Bo Gao](https://www.linkedin.com/in/bo-gao-771841199/) (School of physics, University of Bristol, UK)
 
-### To cite this work:
+---
+
+This project is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html).
+
+**To cite this work:**
 
 X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in progress)
 
