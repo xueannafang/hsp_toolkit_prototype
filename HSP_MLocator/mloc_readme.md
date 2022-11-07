@@ -18,8 +18,10 @@ The studied materials in this case are based on [conjugated microporous polymers
 and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) are required to be installed before using this tool.
 
 [numpy](https://numpy.org/),
-[pandas](https://pandas.pydata.org/), and
-[scipy](https://docs.scipy.org/doc/) are required to be installed in python.
+[pandas](https://pandas.pydata.org/), 
+[scipy](https://docs.scipy.org/doc/), 
+[mpl_toolkits](https://matplotlib.org/1.3.0/mpl_toolkits/index.html), and 
+[matplotlib.pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html) are required to be installed in python.
 
 **OS:** Windows 10
 
