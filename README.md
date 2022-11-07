@@ -1,5 +1,9 @@
 Last update: 07/11/2022
 
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/logo_all.png>
+ </p>
+
 This project contains two python-based Hansen solubility parameters (HSP) toolkits:
 
 * [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/blob/main/HSP_SolventPredictor/solv_pred_readme.md): Based on the target Hansen solubility parameters (HSPs), propose a list of multi-solvent combination.
