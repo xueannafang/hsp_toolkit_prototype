@@ -6,6 +6,10 @@ Last update on 07/11/2022
 
 (As shown in its name, we locate M in the Hansen space, therefore it is called "*M Locator*")
 
+<p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/m_loc_sch.png width=500>
+  </p>
+
 The later part of *M Locator* is connected to [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md) to provide multi-solvent suggestion based on the as-predicted HSP of the material.
 
 The solubility indicator applied in this version is based on UV-Vis spectroscoy features.
