@@ -192,13 +192,35 @@ This is the most important output that the user need to read.
   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_ori.png>
   </p>
 
+## Troubleshooting
 
+Generally, the calculation will be done within 1 min.
+
+If it fails to converge, a warning will present:
+
+```
+Warning: Reach maximum iterations. Fail to converge!
+```
  
- 
- 
- 
- 
- 
- 
- 
- 
+You can first try to increase the **tol_mop** by moving forward one decimal place.
+
+If the problem is still there, carefully increase the **alpha**.
+
+(It is not recommended to directly start with increasing maximum iteration steps **n_max** as it would be less efficient than the previous two solutions.)
+
+### General notes
+
+To avoid troubles as possible, please be extra careful with
+
+- Removing or changing file names of .py documents;
+- Using space or other special characters in input spreadsheets, especially in "CAS No." and "Indicator";
+- Editing title line of input spreadsheets.
+
+
+## Cite this work
+
+This work is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+
+To cite this work, please use:
+
+*X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)*
