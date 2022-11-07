@@ -100,12 +100,28 @@ We use [gradient descent](https://ml-cheatsheet.readthedocs.io/en/latest/gradien
 - an extreme small number served as the threshold below which the system is regarded as converged
 - default = 0.0001
 
+## Step 4 Upload input files and run
 
+Upload *input_mloc_data.xlsx*, *db.xlsx* and *input_solv_sel.xlsx* into the last second line in the cell below.
 
+Execute this cell.
 
+```
+class MLocSolvPred():
 
+    def __init__(self, exp_result, input_solv, db):
+        self.mop = LOCM.MLoc(exp_result, db)
+        print(self.mop.folder_path)
+        self.pred = HSP.SolvPredictor(input_solv, db, folder_name = self.mop.folder_path)
+    
+    def run_all(self, alpha = 0.001, n_max = 1000000, tol_mop = 0.0001, n = 3, rep_time = 50, std = 0.1, tol_pred = 0.1, red_tol = 0.01):
+        cord_result = self.mop.run_all(alpha = alpha, n_max = n_max, tol = tol_mop)
+        self.pred.run_all(n, cord_result[0][0], cord_result[0][1], cord_result[0][2], rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
 
+mp = MLocSolvPred(r'input_mloc_data.xlsx', r'input_solv_sel.xlsx', r'db.xlsx')
+mp.run_all()
+```
 
-
+## Output examples
 
 
