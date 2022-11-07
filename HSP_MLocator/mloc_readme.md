@@ -2,15 +2,15 @@ Last update on 07/11/2022
 
 # M Locator
 
-*M Locator* is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility score (*w<sub>i</sub>*) measured from a series of solvents.
+As indicated by its name, *M Locator* locates "*M*" in the Hansen space. It is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility score (*w<sub>i</sub>*) measured from a series of solvents.
 
-(As shown in its name, we locate M in the Hansen space, therefore it is called "*M Locator*")
+*M Locator* can be useful for complicated systems whose exact chemical component is hard to confirm. This could be, for example, polymeric systems with high dispersity, mixtures of isomers or analogous, etc., which means bottom-up method like group contribution may not be easy to be carried out. 
 
 <p>
   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/m_loc_sch.png width=500>
   </p>
 
-The later part of *M Locator* is connected to [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md) to provide multi-solvent suggestion based on the as-predicted HSP of the material.
+Part of the *M Locator* is connected to [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md) to provide multi-solvent suggestion based on the as-predicted HSP of the material.
 
 The solubility indicator applied in this version is based on UV-Vis spectroscoy features.
 
@@ -56,12 +56,8 @@ import os
 
 Note: Explanation of how to use *input_solv_sel.xlsx* and *db.xlsx* is described in **Step 2** of [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md).
 
-- Solubility indicator (*input_mloc_data.xlsx*)
+- Solubility scores (*input_mloc_data.xlsx*)
 
 This spreadsheet contains experimental-measured results that serve as the solubility score when optimising the location of M.
-
-
-
-
 
 
