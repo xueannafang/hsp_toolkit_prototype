@@ -17,11 +17,6 @@ The key function is to convert the target HSP into a multi-solvent list based on
 
 This is a beginner-friendly version that does not require too much coding background.
 
-However, to avoid troubles as possible, please be extra careful with
-- Removing or changing file names of .py documents;
-- Using space or other special characters in input spreadsheets, especially in "CAS No.";
-- Editing title line of input spreadsheets.
-
 [Python](https://www.python.org/),
 [Jupyter notebook](https://jupyter.org/)
 and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) are required to be installed before using this tool.
@@ -310,7 +305,9 @@ This also works for more than two solvents situation. See the next trinary syste
 
 
 
-**Troubleshooting**
+## Troubleshooting
+
+### No output in Final_result.xlsx
 
 In certain cases when the *Solvent Predictor* can not give a suggestion, which can be caused by the failure of solving linear equations, when no combinations can lead to the target HSP, you will see a warning saying **"No solvent matched. Please increase tolerance."**
 
@@ -338,9 +335,20 @@ From the mathematical level, this means you are attempting to create a zero by a
 
 If we look back at the figure shown in the beginning, we will notice that the HSP limit of all the potential solvent combinations is eventually restricted by the HSP of neat solvent candidates. Therefore, when setting the target, we also need to keep in mind that the region connected by all the neat solvent candidate in the Hansen space must cover this target. Otherwise the target would not be achievable.
 
+### General notes
 
+To avoid troubles as possible, please be extra careful with
 
-## References
+- Removing or changing file names of .py documents;
+- Using space or other special characters in input spreadsheets, especially in "CAS No.";
+- Editing title line of input spreadsheets.
+
+---
+## Cite this work
+
+This work is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+
+To cite this work, please use:
 
 X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)
 
