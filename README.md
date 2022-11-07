@@ -9,7 +9,7 @@ The aim of this project is to develop quantitative solvent selection tools for s
 Solubility can be quantified by the Hansen distance (R). HSP of a solvent mixture follows a linear combination of its components, which greatly expands options based on given lab solvents.
 
 <p>
- <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_general.png>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_general.png width=300>
  </p>
 
 There are nevertheless a couple of challenges when using HSP:
