@@ -124,4 +124,11 @@ mp.run_all()
 
 ## Output examples
 
+Once the calculation has finished, you will see a rough calculation report in the notebook:
+<p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_notebook.png>
+  </p>
+
+where the folder path, initial guess, iteration steps as well as a 3D plot containing M and all the applied solvents will be presented.
+
 
