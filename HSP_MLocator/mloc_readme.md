@@ -2,7 +2,7 @@ Last update on 07/11/2022
 
 # M Locator
 
-*M Locator* is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility indicator in a series of solvents.
+*M Locator* is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility score (*w<sub>i</sub>*) measured from a series of solvents.
 
 (As shown in its name, we locate M in the Hansen space, therefore it is called "*M Locator*")
 
