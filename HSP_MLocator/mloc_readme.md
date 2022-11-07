@@ -80,5 +80,32 @@ The "Indicator" column is the solubility indicator, which in this case is maximu
 run_all(self, alpha = 0.001, n_max = 1000000, tol_mop = 0.0001, n = 3, rep_time = 50, std = 0.1, tol_pred = 0.1, red_tol = 0.01)
 ```
 
+Given that less Hansen distance suggests better solvent, which should ideally have higher solubility indicator, the key optimisation process is based on minimise the overall weighted Hansen distance between M and all the tested solvents, where the weight of Hansen distance is the solubility score we mentioned before.
+
+We use [gradient descent](https://ml-cheatsheet.readthedocs.io/en/latest/gradient_descent.html) to find the optimised point.
+
+**alpha**
+
+- learning rate
+- default = 0.001
+- too big may cause the fail of converge
+- too small may increase the calculation time and interation times
+
+**n_max**
+- maxmium iteration times
+- default = 1000000
+- too small may cause fail of converge
+
+**tol_mop**
+- an extreme small number served as the threshold below which the system is regarded as converged
+- default = 0.0001
+
+
+
+
+
+
+
+
 
 
