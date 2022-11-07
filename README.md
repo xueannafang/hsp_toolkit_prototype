@@ -1,6 +1,8 @@
 Last update: 07/11/2022
 
-The aim of this project is to develop quantitative solvent selection tools for synthesis and property control of functional materials. The focus is based on Hansen solubility parameters (HSP). HSP decompose the molecular interaction into dispersion (𝜹𝑫), dipolar (𝜹𝑷) and hydrogen-bonding (𝜹𝑯) interactions.
+The aim of this project is to develop quantitative solvent selection tools for synthesis and property control of functional materials. The focus is based on Hansen solubility parameters (HSP).
+
+HSP decompose the molecular interaction into dispersion (𝜹𝑫), dipolar (𝜹𝑷) and hydrogen-bonding (𝜹𝑯) interactions.
 
 Solubility can be quantified by the Hansen distance (R). HSP of a solvent mixture follows a linear combination of its components, which greatly expands options based on given lab solvents.
 
