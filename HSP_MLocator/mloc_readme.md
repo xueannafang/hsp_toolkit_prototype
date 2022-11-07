@@ -144,5 +144,24 @@ The output folder contains
 
 <p>
   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_files.png>
-  <p>
+  </p>
+
+**\*HSP_compare.xlsx**
+
+This is the most important output that the user need to read.
+
+<p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_compare.png>
+  </p>
  
+ In the "MLoc" row, the HSP of material is list there, with a suggestion of best solvent whose Hansen distance from M is the smallest.
+ 
+ The rest of solvents are also summarised in this spreadsheet, with their HSP list in the **D, P, H, T** columns.
+ 
+ The difference between each HSP sub-parameter is calculated and list in the **dD, dP, dH, dT** columns.
+ 
+ (This design is to make it flexible for user to choose the most interested sub-parameter to understand the contribution of different molecular interaction.)
+ 
+ The final column is the calculated Hansen distance (**R**). Solvents are ranked in the ascending sequence of **R**.
+ 
+ Hereby we keep the Hildebrand (or total) solubility parameter (**T**), which is another useful solubility parameter but does not separate the three interactions.
