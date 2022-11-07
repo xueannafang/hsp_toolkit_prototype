@@ -4,7 +4,7 @@ Last update on 07/11/2022
 
 As indicated by its name, *M Locator* locates "*M*" in the Hansen space. It is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility score (*w<sub>i</sub>*) measured from a series of solvents.
 
-*M Locator* can be useful for complicated systems whose exact chemical component is hard to confirm. This could be, for example, polymeric systems with high dispersity, mixtures of isomers or analogous, etc., which means bottom-up method like group contribution may not be easy to be carried out. 
+*M Locator* can be useful for complicated systems whose exact chemical component is hard to confirm. This could be, for example, polymeric systems with high dispersity, mixtures of isomers or analogous, etc., where bottom-up method like group contribution may not be easy to be carried out. 
 
 <p>
   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/m_loc_sch.png width=500>
@@ -59,5 +59,17 @@ Note: Explanation of how to use *input_solv_sel.xlsx* and *db.xlsx* is described
 - Solubility scores (*input_mloc_data.xlsx*)
 
 This spreadsheet contains experimental-measured results that serve as the solubility score when optimising the location of M.
+
+Users need to update this spreadsheet based on their own experimental set up.
+
+Hereby, the column of "Group", "No_db", "CAS", "Solvent" follow the same method as described in [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md).
+
+In this version, all the "ratio" are set as 100%, suggesting the neat solvent has been applied.
+
+(The future versions will start to include multi-solvent input, where both the "Group" and "ratio" will work together, but for now, don't worry about that.)
+
+
+
+
 
 
