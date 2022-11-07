@@ -15,8 +15,6 @@ The key function is to convert the target HSP into a multi-solvent list based on
 
 ## Before start
 
-This is a beginner-friendly version that does not require too much coding background.
-
 [Python](https://www.python.org/),
 [Jupyter notebook](https://jupyter.org/)
 and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) are required to be installed before using this tool.
@@ -25,6 +23,7 @@ and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) are r
 [pandas](https://pandas.pydata.org/), and
 [scipy](https://docs.scipy.org/doc/) are required to be installed in python.
 
+**OS:** Windows 10
 
 ## Set up
 
