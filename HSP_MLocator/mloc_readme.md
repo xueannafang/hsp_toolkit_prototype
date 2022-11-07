@@ -146,6 +146,18 @@ The output folder contains
   <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_files.png>
   </p>
 
+**\*log_M_loc.txt**
+
+- The first line of the log file is the initial guess.
+- The following three lines correspond to the set up of maximum iteration steps, learning rate, tolerence of converge, respectively.
+- The next line is the actual iteration steps.
+- Finally it is the predicted HSP of M.
+
+<p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_log.png>
+  </p>
+
+
 **\*HSP_compare.xlsx**
 
 This is the most important output that the user need to read.
@@ -164,4 +176,29 @@ This is the most important output that the user need to read.
  
  The final column is the calculated Hansen distance (**R**). Solvents are ranked in the ascending sequence of **R**.
  
- Hereby we keep the Hildebrand (or total) solubility parameter (**T**), which is another useful solubility parameter but does not separate the three interactions.
+ Hereby we keep the Hildebrand (or total) solubility parameter (**T**), which is another useful solubility parameter in polymer research.
+ 
+ (Note that the Hildebrand solubility parameter does not separate the three interactions, which means the same deviation could still correspond to different position in the Hansen space.)
+ 
+ ### Personalise the plot
+ 
+ The output spreadsheet allows user to further personalise their plot settings, which is more flexible than the auto-generated plot in the notebook.
+ 
+ To do this, users can copy the first four columns into other plotting software, e.g., [Origin](https://www.originlab.com/), followed by setting D, P, H into X, Y, Z and generate the 3D scattered plot.
+ 
+ The column of "No." can be served as the index of data points in the graph to make it more intuitive to track which point is what solvent.
+ 
+ <p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_ori.png>
+  </p>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
