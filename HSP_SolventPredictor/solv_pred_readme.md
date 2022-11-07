@@ -13,6 +13,10 @@ The aim of *Solvent Predictor* is to support the solvent suggestion when a desir
 
 The key function is to convert the target HSP into a multi-solvent list based on the requirement of user.
 
+<p>
+ <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/solv_pred_sch.png">
+ </p>
+
 ## Before start
 
 [Python](https://www.python.org/),
