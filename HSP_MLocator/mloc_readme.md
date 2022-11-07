@@ -66,10 +66,19 @@ Hereby, the column of "Group", "No_db", "CAS", "Solvent" follow the same method 
 
 In this version, all the "ratio" are set as 100%, suggesting the neat solvent has been applied.
 
-(The future versions will start to include multi-solvent input, where both the "Group" and "ratio" will work together, but for now, don't worry about that.)
+(In the future versions, there will be functions of multi-solvent input, where both the "Group" and "ratio" will work together, but for now, don't worry about that.)
 
+The "Indicator" column is the solubility indicator, which in this case is maximum characteristic UV-Vis absorbance data.
 
+*Please make sure all the data filled in this column must be non-negative float.*
 
+### Step 3 Specify arguments in run_all()
+
+*run_all()* contains 9 arguments, among which **alpha, n_max, tol_mop** belongs to the optimisation of HSP of M, and **n, rep_time, std, tol_pred, red_tol** belongs to *Solvent Predictor* (which will not be introduced in this document).
+
+```
+run_all(self, alpha = 0.001, n_max = 1000000, tol_mop = 0.0001, n = 3, rep_time = 50, std = 0.1, tol_pred = 0.1, red_tol = 0.01)
+```
 
 
 
