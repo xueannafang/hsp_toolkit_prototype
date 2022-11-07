@@ -131,4 +131,18 @@ Once the calculation has finished, you will see a rough calculation report in th
 
 where the folder path, initial guess, iteration steps as well as a 3D plot containing M and all the applied solvents will be presented.
 
+At the mean time, a folder named *mloc_data* is created.
 
+(Note that if the *input_mloc_data.xlsx* has been renamed, this folder name would be anything between *input_* and *.xlsx*) 
+
+The output folder contains
+
+- a png file of the 3D scheme shown in the notebook
+- a spreadsheet with all the HSP involved in the calculation and comparison of solvent quality using Hansen distance
+- a log file of calculation details and optimisation results
+- the full output based on *Solvent Predictor*, where the target is the HSP of M
+
+<p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/op_mloc_files.png>
+  <p>
+ 
