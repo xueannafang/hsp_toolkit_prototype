@@ -31,6 +31,14 @@ These toolkits are developed with Python 3.7.3 and tested in Windows 10.
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/logo_all.png width=200>
  </p>
  
+ 
+ ### References
+
+1. C. Hansen, Hansen Solubility Parameters – A user’s handbook, 2nd edition, 2011.
+2. X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)
+3. X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, M Locator - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in preparation).
+
+
 ---
 
 This project is developed by
@@ -54,13 +62,6 @@ The author acknowledges the following organisations for funding of this project:
 The author also thanks all who have provided inputs and technical support during the design and exploration of these toolkits, in particular:
 
 - [Bo Gao](https://www.linkedin.com/in/bo-gao-771841199/) (School of physics, University of Bristol, UK)
-
-
-### References
-
-1. C. Hansen, Hansen Solubility Parameters – A user’s handbook, 2nd edition, 2011.
-2. X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)
-3. X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, M Locator - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in preparation).
 
 
 ---
