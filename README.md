@@ -45,10 +45,3 @@ The author also thanks all who have provided inputs and technical support during
 ---
 
 This project is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html).
-
-**To cite this work:**
-
-X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in progress)
-
-X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, M Locator - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in progress)
-
