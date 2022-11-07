@@ -1,7 +1,3 @@
-<p>
- <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/logo_all.png width=200>
- </p>
- 
 Last update: 07/11/2022
 
 The aim of this project is to develop quantitative solvent selection tools for synthesis and property control of functional materials. The focus is based on Hansen solubility parameters (HSP). HSP decompose the molecular interaction into dispersion (𝜹𝑫), dipolar (𝜹𝑷) and hydrogen-bonding (𝜹𝑯) interactions.
@@ -29,7 +25,10 @@ To improve these issues, we developed two python-based toolkits:
 
 These toolkits are developed with Python 3.7.3 and tested in Windows 10.
 
-
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/logo_all.png width=200>
+ </p>
+ 
 ---
 
 This project is developed by
