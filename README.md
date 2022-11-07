@@ -55,6 +55,14 @@ The author also thanks all who have provided inputs and technical support during
 
 - [Bo Gao](https://www.linkedin.com/in/bo-gao-771841199/) (School of physics, University of Bristol, UK)
 
+
+### References
+
+1. C. Hansen, Hansen Solubility Parameters – A user’s handbook, 2nd edition, 2011.
+2. X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)
+3. X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, M Locator - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in preparation).
+
+
 ---
 
 This project is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html).
