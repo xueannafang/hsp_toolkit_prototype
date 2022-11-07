@@ -1,8 +1,8 @@
-Last update: 07/11/2022
-
 <p>
  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/logo_all.png width=200>
  </p>
+ 
+Last update: 07/11/2022
 
 This project contains two python-based Hansen solubility parameters (HSP) toolkits:
 
