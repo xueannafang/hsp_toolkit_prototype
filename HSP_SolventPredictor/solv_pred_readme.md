@@ -343,7 +343,7 @@ To avoid troubles as possible, please be extra careful with
 - Using space or other special characters in input spreadsheets, especially in "CAS No.";
 - Editing title line of input spreadsheets.
 
----
+
 ## Cite this work
 
 This work is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
