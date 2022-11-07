@@ -2,24 +2,24 @@ import numpy as np
 import pandas as pd
 from scipy.linalg import pinv
 import itertools
-import abc
 import os
 
-class HSPToolkit(abc.ABC):
-    """
-    This is an abstract class
-    """
+class HSPToolkit():
+   
     def __init__(self, input_solv, db, folder_name = ''):
-        self.input_df = pd.read_excel(input_solv)
-        self.db_df = pd.read_excel(db)
-        self.solv_pool = self.get_solv_pool()
-        self.input_name = str(input_solv)
-        self.proc_name = self.input_name_proc()
-        self.folder_path = self.new_folder_path(folder_name)
-        self.check_dir()
-        self.output_pref = self.path_n_pref()
+        self.input_df = pd.read_excel(input_solv) # read input solvent candidate list and convert to dataframe
+        self.db_df = pd.read_excel(db) # read input database and convert to database
+        self.input_name = str(input_solv) # format file name of the input solvent candidate list
+        self.proc_name = self.input_name_proc() # process the input file name
+        self.folder_path = self.new_folder_path(folder_name) # create folder path to save output files
+        self.check_dir() # check if output folder already exists
+        self.output_pref = self.path_n_pref() # generate output file prefix
     
     def check_dir(self):
+        """
+        check if the output folder is already there
+        if not, create the output folder
+        """
         if os.path.exists(self.folder_path):
             return True
         else:
@@ -27,6 +27,10 @@ class HSPToolkit(abc.ABC):
 
 
     def input_name_proc(self):
+        """
+        extract input file name between input_ and .xlsx
+        this proc_name will be applied as part of the output prefix
+        """
         raw_name = self.input_name
         name_no_ext = list(raw_name.split('.'))
         name_no_input = list(name_no_ext[0].split('_'))
@@ -35,7 +39,9 @@ class HSPToolkit(abc.ABC):
         return proc_name
     
     def new_folder_path(self, folder_name):
-        
+        """
+        create output folder path
+        """
         if not folder_name:
             folder_name = self.input_name_proc()
             current_path = os.getcwd()
@@ -49,27 +55,26 @@ class HSPToolkit(abc.ABC):
         return new_folder_path
     
     def path_n_pref(self):
+        """
+        create output document prefix
+        """
         new_path = self.folder_path
         name_pref = self.input_name_proc()
         output_pref = new_path + name_pref +'_'
         return output_pref
 
-    @abc.abstractmethod
-    def get_solv_pool(self):
-        pass
-
 
 class SolvPredictor(HSPToolkit):
-    """
-    This is a solvent mixer.
-    """
 
     def __init__(self, input_solv, db, folder_name = ''):
         super().__init__(input_solv, db, folder_name = folder_name)
-        self.n_solvent = len(self.input_df)
+        self.n_solvent = len(self.input_df) # get total amount of solvent in the input candidate list
 
     def get_solv_pool(self):
-
+        """
+        extract key information of input solvent candidate list from database and combine into one list
+        each entry is matached by CAS No.
+        """
         all_input_solv = []
 
         for index, input_row in self.input_df.iterrows():
@@ -84,30 +89,46 @@ class SolvPredictor(HSPToolkit):
         return all_input_solv
     
     def init_s_tot(self):
+        """
+        create the entire solvent candidate HSP matrix (before combination)
+        s_tot is a 4*n_solvent(total amount of solvent candidates) matrix
+        the first three rows are HSP of each solvent candidate
+        the last row is 1, aiming at normalising the total concentration to be 100%
+        """
+        s_tot = np.ones((4, self.n_solvent)) # s_tot is a 4*n_solvent matrix.
 
-        s_tot = np.ones((4, self.n_solvent)) #s_tot is a 4*n_solvent matrix.
+        self.solv_pool = self.get_solv_pool()
 
         for solv in self.solv_pool:
-            solv_ind = solv[0]
-            s_tot[:-1,solv_ind] = solv[1:-1]
+            solv_ind = solv[0] # get candidate solvent index
+            s_tot[:-1,solv_ind] = solv[1:-1] # fill in the first three rows with HSP of each solvent candidate
+        
             
         return s_tot
     
     def solv_comb(self, n):
-
+        """
+        get all the possible n-solvent combinations of solvent candidates
+        """
         all_solv_comb = itertools.combinations(range(self.n_solvent),n)
 
         return all_solv_comb
     
     def target_mat(self, D, P, H, rep_time = 50, std = 0.1):
+        """
+        construct target hsp matrix with perturbation
+        """
         
-        ds_HSP = [D, P, H, 1]
-        ptb_mat = np.random.randn(rep_time, 4)*(std, std, std, 0) #perturb
-        ds_mat = ptb_mat + np.array(ds_HSP) * np.ones((rep_time, 4))
+        ds_HSP = [D, P, H, 1] # construct the desired target hsp matrix
+        ptb_mat = np.random.randn(rep_time, 4)*(std, std, std, 0) # construct the perturbation matrix with first three rows equal to gaussian random variables, last row 0
+        ds_mat = ptb_mat + np.array(ds_HSP) * np.ones((rep_time, 4)) # add the above two matrices together
 
         return ds_mat
     
     def calc_unit(self, comb, s_tot, ds_mat, n):
+        """
+        this is the main calculation unit to solve the linear equation
+        """
         
         s_temp = np.zeros((4,n))
 
@@ -116,28 +137,31 @@ class SolvPredictor(HSPToolkit):
         e_list = []
         
         for i, k in enumerate(comb):
-            s_temp[:,i] = s_tot[:,k]  #the ith column of s_temp is the kth solvent in s_tot.
+            s_temp[:,i] = s_tot[:,k]  # the ith column of s_temp is the kth solvent in s_tot.
             sel_solv = self.solv_pool[k][4][0]['Solvent']
             sel_solv_no = self.solv_pool[k][4][0]['No_db']
-            out_solv.append(sel_solv)
-            out_solv_no.append(sel_solv_no)
+            out_solv.append(sel_solv) # get selected solvent name
+            out_solv_no.append(sel_solv_no) # get selected solvent no. in the database
         
-        c = pinv(s_temp) @ ds_mat.T
-        c_mean = list(np.mean(c, axis = 1))
-        c_std = list(np.std(c, axis = 1))
+        c = pinv(s_temp) @ ds_mat.T # solve the coefficient matrix c
+        c_mean = list(np.mean(c, axis = 1)) # calculate the averaged concentration over t calculations, each with different perturbation variable
+        c_std = list(np.std(c, axis = 1)) # calculate the std of concentration over t calculations, each with different perturbation variable
 
-        real_hsp = s_temp @ c_mean
+        real_hsp = s_temp @ c_mean # based on the averaged c, re-calculate the hsp, this step is to get ready for error calculation
 
-        e = s_temp @ c - ds_mat.T
-        e_mean = np.mean(e, axis = 1)
-        e_std = np.std(e, axis = 1)
+        e = s_temp @ c - ds_mat.T # absolute error matrix
+        e_mean = np.mean(e, axis = 1) # t-averaged absolute error
+        e_std = np.std(e, axis = 1) # std of absolute error
 
         for j, mean in enumerate(e_mean):
-            e_list += [mean, e_std[j]]
+            e_list += [mean, e_std[j]] # decompose the vector into a list of error of d, p, h, 1
         
         return out_solv + c_mean + c_std + e_list + list(real_hsp) + out_solv_no
     
     def get_col_name(self, n):
+        """
+        format the title line of the output spreadsheet
+        """
 
         col_name = np.zeros((3, n), dtype = object)
         for i in range(n):
@@ -160,6 +184,9 @@ class SolvPredictor(HSPToolkit):
         return col_name
 
     def rough_calc(self, n, D, P, H, rep_time = 50, std = 0.1):
+        """
+        this is the first and rough calculation process
+        """
 
         s_tot = self.init_s_tot()
         all_solv_comb = self.solv_comb(n)
@@ -207,6 +234,9 @@ class SolvPredictor(HSPToolkit):
         return df_new
     
     def update_c(self, n, df_row):
+        """
+        this is to renormalise the total c to be 100%
+        """
         rough_c_list = []
         total_rough_c = 0
         fine_c_list = []
@@ -226,6 +256,9 @@ class SolvPredictor(HSPToolkit):
 
 
     def update_hsp(self, n, df_row):
+        """
+        this is to update hsp after c updated
+        """
         new_c_list = []
         new_hsp_list = []
         ori_hsp_list = [] #the original hsp of individual solvents
@@ -253,6 +286,9 @@ class SolvPredictor(HSPToolkit):
         return df_row
 
     def update_e(self, df_row, D, P, H):
+        """
+        this is to update errors after c updated
+        """
         new_e = [df_row['D']-D, df_row['P']-P, df_row['H']-H]
 
         df_row['e_mean_D'] = new_e[0]
@@ -262,11 +298,17 @@ class SolvPredictor(HSPToolkit):
         return df_row
 
     def error_valid(self, df_row, tol=1):
+        """
+        validate if the error is within tolerance of error
+        """
         if abs(df_row['e_mean_D']) > tol or abs(df_row['e_mean_P']) > tol or abs(df_row['e_mean_H']) > tol:
             return False
         return True
     
     def get_norm_result(self, n, df_new, D, P, H):
+        """
+        normalise c and update hsp and errors
+        """
 
         df_new = df_new.drop(columns = ['I','e_std_D', 'e_std_P', 'e_std_H', 'e_mean_I', 'e_std_I'], axis = 1) #remove I
         df_new = df_new.drop(df_new.iloc[:, 2*n:3*n], axis = 1) #remove the c_std columns
@@ -280,6 +322,9 @@ class SolvPredictor(HSPToolkit):
         return df_new
 
     def error_filter(self, df_new, tol = 1):
+        """
+        filter results with invalid errors and update the dataframe
+        """
         for index, row in df_new.iterrows():
             if not self.error_valid(row, tol= tol):
                 df_new = df_new.drop(index)
@@ -311,6 +356,9 @@ class SolvPredictor(HSPToolkit):
         return df_row
 
     def red_filter(self, D, P, H, n, df_new, red_tol = 0.01):
+        """
+        filter redundant solvents and renormalise c, update hsp and errors and update dataframe to give the final output
+        """
         for index, row in df_new.iterrows():  
             red_solv_order_list = self.get_red_list(n, row, red_tol = red_tol)
             n_of_red_solv = len(red_solv_order_list)
@@ -346,6 +394,9 @@ class SolvPredictor(HSPToolkit):
     
     
     def get_log(self, n, D, P, H, rep_time, std, tol, red_tol):
+        """
+        write log file
+        """
         
         with open(str(self.output_pref) + "log_SolvPredict.txt", "w") as output:
             output.write("Solvent amount = {}\n".format(n))
@@ -362,6 +413,9 @@ class SolvPredictor(HSPToolkit):
             output.write("See Final_result.xlsx as predicted solvents combinations.")
     
     def run_all(self, n, D, P, H, rep_time = 50, std = 0.1, tol = 1, red_tol = 0.01):
+        """
+        run everything 
+        """
         df_total = self.rough_calc(n, D, P, H, rep_time = rep_time, std = std)
         df_new = self.get_stable_result(n, df_total)
         df_new = self.get_norm_result(n, df_new, D, P, H)
