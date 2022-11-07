@@ -4,7 +4,20 @@
  
 Last update: 07/11/2022
 
-This project contains two python-based Hansen solubility parameters (HSP) toolkits:
+The aim of this project is to develop quantitative solvent selection tools for synthesis and property control of functional materials. The focus is based on Hansen solubility parameters (HSP). HSP decompose the molecular interaction into dispersion (𝜹𝑫), dipolar (𝜹𝑷) and hydrogen-bonding (𝜹𝑯) interactions.
+
+Solubility can be quantified by the Hansen distance (R). HSP of a solvent mixture follows a linear combination of its components, which greatly expands options based on given lab solvents.
+
+<p>
+ <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/HSP_general.png>
+ </p>
+
+There are nevertheless a couple of challenges when using HSP:
+
+1. Determining which solvent combinations can lead to a given HSP.
+2. Obtaining HSP of the studied materials (M).
+
+To improve these issues, we developed two python-based toolkits:
 
 * [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/blob/main/HSP_SolventPredictor/solv_pred_readme.md): Based on the target Hansen solubility parameters (HSPs), propose a list of multi-solvent combination.
 
@@ -15,7 +28,6 @@ This project contains two python-based Hansen solubility parameters (HSP) toolki
  </p>
 
 These toolkits are developed with Python 3.7.3 and tested in Windows 10.
-
 
 
 ---
