@@ -46,4 +46,8 @@ from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
 import os
 ```
+### Step 2 Prepare input spreadsheets using Microsoft Excel:
+
+Explanation of how to use *input_solv_sel.xlsx* and *db.xlsx* is described in **Step 2** in [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md).
+
 
