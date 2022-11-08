@@ -8,6 +8,9 @@ import os
 
 @np.vectorize
 def get_distance(d, p, h, ds, ps, hs):
+    """
+    calculate the hansen distance between material and solvents
+    """
     # x, y, z = cord  #cord is the dph tuple of the studied material.
     # sx, sy, sz = cord_s  #cord_s is the dph tuple of the ith solvent.
     distance = np.sqrt(4*(d-ds)**2+(p-ps)**2+(h-hs)**2)
@@ -15,6 +18,10 @@ def get_distance(d, p, h, ds, ps, hs):
 
 @np.vectorize
 def get_weight(indicator):
+    """
+    convert the solubility indicator into weight of Hansen distance
+    Here we directly use the unmodified experimental data, in other cases, if necessary, users can define the relationship between weight and the solubility indicator using this function
+    """
     weight = indicator
     return weight
 
@@ -25,6 +32,10 @@ class MLoc(HSP.HSPToolkit):
         self._organize_dphi()
 
     def get_solv_pool(self):
+        """
+        fetch hsp of tested solvents from the database
+        combine all the involved solvents and their solubility indicators into one list
+        """
         mixed_output = []
         mixed_exp = []
 
@@ -58,11 +69,17 @@ class MLoc(HSP.HSPToolkit):
 
 
     def _organize_dphi(self):
+        """
+        read index, hsp and solubility indicators from the total solvent information list
+        """
         self.solv_pool = self.get_solv_pool()
         all_dphi = np.array(self.solv_pool[0])
         self.all_index, self.all_ds, self.all_ps, self.all_hs, self.all_ind = all_dphi.T
         
     def init_guess(self, cord = None):
+        """
+        calculate the initial guess
+        """
         if cord is not None:
             return cord
         w2 = get_weight(self.all_ind)**2
@@ -73,6 +90,9 @@ class MLoc(HSP.HSPToolkit):
         return d, p, h
     
     def get_delta(self, d, p, h, alpha):
+        """
+        calculate the change of each iteration step
+        """
         all_r = get_distance(d, p, h, self.all_ds, self.all_ps, self.all_hs)
         delta_d = -alpha * 4*np.sum(get_weight(self.all_ind) * (d-self.all_ds) / all_r)
         delta_p = -alpha * np.sum(get_weight(self.all_ind) * (p-self.all_ps) / all_r)
@@ -80,8 +100,14 @@ class MLoc(HSP.HSPToolkit):
         return delta_d, delta_p, delta_h
 
     def gradient_descent(self, cord_0, alpha = 0.01, n_max = 10000, tol = 0.00001):
+        """
+        apply gd to approach the minimal
+        """
 
         def is_converge(delta_d, delta_p, delta_h):
+            """
+            determine if ths system is converged or not
+            """
             if abs(delta_d) < tol and abs(delta_p) < tol and abs(delta_h) <tol:
                 return True
             return False
@@ -89,6 +115,9 @@ class MLoc(HSP.HSPToolkit):
         d, p, h = cord_0
 
         for n in range(n_max):
+            """
+            iteration
+            """
             delta_d, delta_p, delta_h = self.get_delta(d, p, h, alpha)
             if is_converge(delta_d, delta_p, delta_h):
                 print("Converge at {} iteration".format(n))
@@ -101,6 +130,9 @@ class MLoc(HSP.HSPToolkit):
         return [(d, p, h), n]
     
     def get_log(self, cord_0, cord_result, alpha, n_max, tol):
+        """
+        write log file
+        """
         
         with open(str(self.output_pref) + "log_M_loc.txt", "w") as output:
             output.write("Initial guess = {}\n".format(cord_0))
@@ -114,6 +146,9 @@ class MLoc(HSP.HSPToolkit):
             output.write("T of the material = {}\n".format(np.linalg.norm(cord_result[0])))
     
     def get_compare(self, cord_result, mixed_output):
+        """
+        compare the difference between each solvent and the as-predicted HSP of material
+        """
         M_D, M_P, M_H = cord_result[0]
         M_T = np.sqrt(M_D**2+M_P**2+M_H**2)
         col_out_No = []
@@ -188,6 +223,9 @@ class MLoc(HSP.HSPToolkit):
 
 
     def get_plot(self, cord_result, c_solv = 'darkgreen', c_m = 'red'):
+        """
+        generation of the 3D Hansen space plot
+        """
 
         mixed_output = self.solv_pool[1]
         import matplotlib as mpl
@@ -250,6 +288,10 @@ class MLoc(HSP.HSPToolkit):
         plt.savefig(str(self.output_pref) + '3D_M_Loc.png')
         
     def run_all(self, cord = None, alpha = 0.01, n_max = 10000, tol = 0.00001):
+        """
+        run M Locator
+        the returned cord_result is the predicted HSP, which can be further served as the input of solvent predictor to provide a list of multi-solvent combinations
+        """
         initial_guess = self.init_guess(cord = cord)
         print(initial_guess)
         cord_result = self.gradient_descent(cord_0 = initial_guess, alpha = alpha, n_max = n_max, tol = tol)
@@ -258,29 +300,3 @@ class MLoc(HSP.HSPToolkit):
         mixed_output = self.get_solv_pool()[1]
         self.get_compare(cord_result, mixed_output)
         return cord_result
-
-# mop = MLoc(r'input_Safa_SA45_0520.xlsx', r'db.xlsx')
-# cord_result = mop.run_all(alpha = 0.001, n_max = 100000, tol = 0.0001)
-# print(cord_result)
-
-# predictor = HSP.SolvPredictor(r'input_solv_sel.xlsx', r'db.xlsx')
-# predictor.run_all(3, cord_result[0][0], cord_result[0][1], cord_result[0][2], rep_time = 50, std = 0.1, tol = 0.1, red_tol = 0.01)
-
-# import shutil
-# ori_path = predictor.folder_path
-# target_path = mop.folder_path
-# # shutil.move(ori_path, target_path)
-
-# class MLocSolvPred():
-
-#     def __init__(self, exp_result, input_solv, db):
-#         self.mop = MLoc(exp_result, db)
-#         print(self.mop.folder_path)
-#         self.pred = HSP.SolvPredictor(input_solv, db, folder_name = self.mop.folder_path)
-    
-#     def run_all(self, alpha = 0.001, n_max = 1000000, tol_mop = 0.0005, n = 3, rep_time = 50, std = 0.1, tol_pred = 0.1, red_tol = 0.01):
-#         cord_result = self.mop.run_all(alpha = alpha, n_max = n_max, tol = tol_mop)
-#         self.pred.run_all(n, cord_result[0][0], cord_result[0][1], cord_result[0][2], rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
-
-# mp = MLocSolvPred(r'input_Basi_PPI2_0523.xlsx', r'input_solv_sel.xlsx', r'db.xlsx')
-# mp.run_all()
