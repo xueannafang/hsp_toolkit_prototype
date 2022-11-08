@@ -58,6 +58,10 @@ Note: Explanation of how to use *input_solv_sel.xlsx* and *db.xlsx* is described
 
 - Solubility scores (*input_mloc_data.xlsx*)
 
+<p>
+  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/ip_mloc.png>
+  </p>
+  
 This spreadsheet contains experimental-measured results that serve as the solubility score when optimising the location of M.
 
 Users need to update this spreadsheet based on their own experimental set up.
