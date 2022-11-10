@@ -57,7 +57,7 @@ The author acknowledges the following organisations for funding of this project:
 
 - [University of Bristol](https://www.bristol.ac.uk/)
 - [Chinese Scholarship Council](https://www.chinesescholarshipcouncil.com/)
-- [Royal Society of Chemistry](https://www.rsc.org/)
+- [Royal Society of Chemistry Researcher Development Grants](https://www.rsc.org/prizes-funding/funding/find-funding/researcher-development-grant/)
 
 The author also thanks all who have provided inputs and technical support during the design and exploration of these toolkits, in particular:
 
