@@ -53,7 +53,7 @@ with instruction from
 
 Experimental test data of *M Locator* is contributed by the Conjugated Microporous Polymers (CMP) team of the [Faul research group](https://faulresearchgroup.com/).
 
-The author acknowledges the following organisations for funding of this project:
+The author acknowledges the following organisations for funding this project:
 
 - [University of Bristol](https://www.bristol.ac.uk/)
 - [Chinese Scholarship Council](https://www.chinesescholarshipcouncil.com/)
