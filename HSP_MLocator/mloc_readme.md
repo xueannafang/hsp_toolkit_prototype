@@ -2,7 +2,9 @@ Last update on 07/11/2022
 
 # M Locator
 
-As indicated by its name, *M Locator* locates "*M*" in the Hansen space. It is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility score (*w<sub>i</sub>*) measured from a series of solvents.
+As indicated by its name, *M Locator* locates "*M*" in the Hansen space.
+
+It is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility score (*w<sub>i</sub>*) measured from a series of solvents.
 
 *M Locator* can be useful for complicated systems whose exact chemical component is hard to confirm. This could be, for example, polymeric systems with high dispersity, mixtures of isomers or analogous, etc., where bottom-up method like group contribution may not be easy to be carried out. 
 
@@ -84,7 +86,7 @@ The "Indicator" column is the solubility indicator, which in this case is maximu
 run_all(self, alpha = 0.001, n_max = 1000000, tol_mop = 0.0001, n = 3, rep_time = 50, std = 0.1, tol_pred = 0.1, red_tol = 0.01)
 ```
 
-Given that less Hansen distance suggests better solvent, which should ideally have higher solubility indicator, the key optimisation process is based on minimise the overall weighted Hansen distance between M and all the tested solvents, where the weight of Hansen distance is the solubility score we mentioned before.
+Given that less Hansen distance suggests better solvent, which should ideally have higher solubility indicator, the key optimisation process is based on minimising the overall weighted Hansen distance between M and all the tested solvents, where the weight of Hansen distance is the solubility score we mentioned before.
 
 We use [gradient descent](https://ml-cheatsheet.readthedocs.io/en/latest/gradient_descent.html) to find the optimised point.
 
@@ -93,10 +95,10 @@ We use [gradient descent](https://ml-cheatsheet.readthedocs.io/en/latest/gradien
 - learning rate
 - default = 0.001
 - too big may cause the fail of converge
-- too small may increase the calculation time and interation times
+- too small may increase the calculation time and iteration steps
 
 **n_max**
-- maxmium iteration times
+- maxmium iteration steps
 - default = 1000000
 - too small may cause fail of converge
 
@@ -153,7 +155,7 @@ The output folder contains
 **\*log_M_loc.txt**
 
 - The first line of the log file is the initial guess.
-- The following three lines correspond to the set up of maximum iteration steps, learning rate, tolerence of converge, respectively.
+- The following three lines correspond to the set up of maximum iteration steps, learning rate, tolerance of converge, respectively.
 - The next line is the actual iteration steps.
 - Finally it is the predicted HSP of M.
 
