@@ -118,7 +118,7 @@ D, P, H stands for dispersion, dipolar and hydrogen bond sub-parameters (usually
 
 Users can add alias/abbreviations for solvents with long names, e.g., acetonitrile -> ACN, in the "alias" column.
 
-*Note that in this beginner-friendly version, content not in the first six columns (No., CAS, Name, D, P, H) will not affect the calclation. Only to make it convenient for users to search the request entries.*
+*Note that in this beginner-friendly version, content not in the first six columns (No., CAS, Name, D, P, H) will not affect the calculation. Only to make it convenient for users to search the request entries.*
 
 *Experienced users can personalise the additional parameters by operating other columns of this database file and include them in DataFrame settings.*
 
@@ -137,7 +137,7 @@ where the default values of *n, rep_time, std, tol_pred, red_tol* are set as *2,
 def mix_pred(self, n = 2, rep_time = 50, std = 0.1, tol_pred = 1, red_tol = 0.01):
 ```
 
-Please do not change the sequence of them or remove any item. (The first one, **self**, does not need any modification - just leave it there.)
+Please do not change the sequence of them or remove any item. (The first one, **self**, does not need any modification - please just leave it there.)
 
 Here is an explanation of each argument:
 
@@ -175,7 +175,7 @@ This tolerance (we call it "tolerance of redundant solvent concentration") can b
 
 - tolerance of error
 - can be regarded as concentration deviated from the target
-- Calculated concentration deviate more than this value will be filtered.
+- Calculated concentration deviating more than this value will be filtered.
 
 **red_tol**
 
@@ -252,7 +252,7 @@ The first line: "Solvent amount", equals to the input **n**.
 
 The fourth to seventh line are the original target HSP, which in this case is D = 18.0, P = 1.4, H = 2.0
 
-The next section is set up of statistical perturbation applied on the target HSP.
+The next section is the set up of statistical perturbation applied on the target HSP.
 
 In this case, we used the default setting (t, std) = (50, 0.1), meaning that the calculation was carried out for 50 times, with each time a different Gaussian random variable with standard deviation equals to 0.1 applied to each element of the original target HSP.
 
@@ -261,7 +261,7 @@ The final part is the set up for results filtration, where we specified the tole
 
 ### solv_sel_Final_result.xlsx
 
-This is the most imporatne output that the user should read.
+This is the most important output that the user should read.
 
 Here is part of the output spreadsheet of the previous submission:
 
@@ -279,7 +279,7 @@ The next three columns, "e_mean_D", "e_mean_P", "e_mean_H", are absolute errors 
 
 Column "D", "P", "H" are the calculated HSP from each solvent combinations;
 
-The last two (or **n**) columns are the index of corresponding solvent conponent in the database (db).
+The last two (or **n**) columns are the index of corresponding solvent component in the database (db).
 
 Users can determine whether to format those numbers into a more organised way:
 
@@ -312,7 +312,10 @@ This also works for more than two solvents situation. See the next trinary syste
 
 ### No output in Final_result.xlsx
 
-In certain cases when the *Solvent Predictor* can not give a suggestion, which can be caused by the failure of solving linear equations, when no combinations can lead to the target HSP, you will see a warning saying **"No solvent matched. Please increase tolerance."**
+In certain cases when the *Solvent Predictor* can not give a suggestion, which can be caused by the failure of solving linear equations, when no combinations can lead to the target HSP, you will see a warning saying:
+```
+No solvent matched. Please increase tolerance.
+```
 
 The whole calculation will still be completed but there will be nothing shown in \*Final_result.xlsx.
 
@@ -336,7 +339,7 @@ This would be a really extreme goal for our solvent candidates, because the disp
 
 From the mathematical level, this means you are attempting to create a zero by adding up a series of positive numbers, which can be regarded as an impossible mission.
 
-If we look back at the figure shown in the beginning, we will notice that the HSP limit of all the potential solvent combinations is eventually restricted by the HSP of neat solvent candidates. Therefore, when setting the target, we also need to keep in mind that the region connected by all the neat solvent candidate in the Hansen space must cover this target. Otherwise the target would not be achievable.
+If we look back at the figure shown at the beginning, we will notice that the HSP limit of all the potential solvent combinations is eventually restricted by the HSP of neat solvent candidates. Therefore, when setting the target, we also need to keep in mind that the region connected by all the neat solvent candidates in the Hansen space must cover this target. Otherwise the target would not be achievable.
 
 ### General notes
 
