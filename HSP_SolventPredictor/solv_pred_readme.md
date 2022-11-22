@@ -128,7 +128,7 @@ Users can add alias/abbreviations for solvents with long names, e.g., acetonitri
 **self.pred.run_all()** contains eight arguments: *n, delta_D, delta_P, delta_H, rep_time, std, tol_pred, red_tol*,
 
 ```
-self.pred.run_all(n, 0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
+self.pred.run_all(n, 18.0, 1.4, 2.0, rep_time = rep_time, std = std, tol = tol_pred, red_tol = red_tol)
 ```
 
 where the default values of *n, rep_time, std, tol_pred, red_tol* are set as *2, 50, 0.1, 1, 0.01*, respectively, as shown in
