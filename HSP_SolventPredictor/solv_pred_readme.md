@@ -180,7 +180,7 @@ This tolerance (we call it "tolerance of redundant solvent concentration") can b
 **red_tol**
 
 - tolerance of redundant solvent concentration
-- Calculated conecentration below than this value will be filtered.
+- Calculated conecentration below this value will be filtered.
 
 
 ### Step 4 Upload and run
@@ -208,7 +208,7 @@ Otherwise you need to update the file name in
 SolvPred(r'input_solv_sel.xlsx', r'db.xlsx')
 ```
 
-Here the first arugement corresponds to the solvent candidate list, and the second one is the database.
+Here the first argument corresponds to the solvent candidate list, and the second one is the database.
 
 The name of solvent candidate list must start with "input_" and end with ".xlsx" in this version.
 
