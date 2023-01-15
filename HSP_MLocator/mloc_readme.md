@@ -1,23 +1,8 @@
-Last update on 07/11/2022
+Last update on 15/01/2023
 
-# M Locator
+# M Locator/MLoc (prototype) v1.0
 
-As indicated by its name, *M Locator* locates "*M*" in the Hansen space.
-
-It is a top-down approach aiming at obtaining the HSP of as-studied material (M) using a solubility score (*w<sub>i</sub>*) measured from a series of solvents.
-
-*M Locator* can be useful for complicated systems whose exact chemical component is hard to confirm. This could be, for example, polymeric systems with high dispersity, mixtures of isomers or analogous, etc., where bottom-up method like group contribution may not be easy to be carried out. 
-
-<p>
-  <img src=https://github.com/xueannafang/hsp-toolkits/blob/main/figs/m_loc_sch.png width=500>
-  </p>
-
-Part of the *M Locator* is connected to [*Solvent Predictor*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md) to provide multi-solvent suggestion based on the as-predicted HSP of the material.
-
-The solubility indicator applied in this version is based on UV-Vis spectroscoy features.
-
-The studied materials in this case are based on [conjugated microporous polymers (CMP)](https://www.sciencedirect.com/topics/engineering/conjugated-microporous-polymer).
-
+## Please check [here](https://github.com/xueannafang/HSP_toolkit_docs/blob/main/hsp_tool_general_intro.md) as the general introduction and background of this project.
 
 ## Before start
 
@@ -32,6 +17,11 @@ and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) are r
 [matplotlib.pyplot](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html) are required to be installed in python.
 
 **OS:** Windows 10
+
+**Notes:**
+- Part of *MLoc* in this version is connected to [*SolvPred (prototype) v1.0*](https://github.com/xueannafang/hsp-toolkits/edit/main/HSP_SolventPredictor/solv_pred_readme.md) to provide multi-solvent suggestion based on the as-predicted HSP of the material.
+- The solubility indicator applied in this version is based on UV-Vis spectroscoy features.
+- The studied materials in this version are based on [conjugated microporous polymers (CMP)](https://www.sciencedirect.com/topics/engineering/conjugated-microporous-polymer).
 
 ## Set up
 
@@ -229,4 +219,8 @@ This work is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
 To cite this work, please use:
 
-*X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, M Locator - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in preparation).*
+*X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, MLoc - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in preparation).*
+
+## Disclaimer
+
+  - MLoc is under continous tests and improvement. The output only provide suggestion. Results may vary with multi factors in complicated situations. It is the users responsbility to manuallay check the exact experimental performance in different scenarios.
