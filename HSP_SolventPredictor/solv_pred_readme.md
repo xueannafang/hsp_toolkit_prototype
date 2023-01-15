@@ -1,21 +1,8 @@
-Last update on 07/11/2022
+Last update on 15/01/2023
 
-# Solvent Predictor
+# Solvent Predictor/SolvPred (prototype) v1.0
 
-
-Given that HSP of a solvent mixture follows a linear combination of each individual component, researchers can easily calculate the HSP of solvent systems with known components. It is however much more difficult to reverse this process.
-
-<p>
- <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/bg_solvpred.png" width=1000>
- </p>
-
-The aim of *Solvent Predictor* is to support the solvent suggestion when a desired goal of HSP is known.
-
-The key function is to convert the target HSP into a multi-solvent list based on the requirement of user.
-
-<p>
- <img src="https://github.com/xueannafang/hsp-toolkits/blob/main/figs/solv_pred_sch.png" width=500>
- </p>
+## Please check [here](https://github.com/xueannafang/HSP_toolkit_docs/blob/main/hsp_tool_general_intro.md) as the general introduction and background of this project.
 
 ## Before start
 
@@ -356,6 +343,6 @@ This work is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
 To cite this work, please use:
 
-*X. Fang, C. F.J. Faul, N. Fey, E. Gale, Solvent Predictor - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)*
+*X. Fang, C. F.J. Faul, N. Fey, E. Gale, SolvPred - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)*
 
 
