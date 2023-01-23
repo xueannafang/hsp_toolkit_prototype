@@ -1,8 +1,10 @@
-Last update on 15/01/2023
+Last update on 23/01/2023
 
 # Solvent Predictor/SolvPred (prototype) v1.0
 
 ## Please check [here](https://github.com/xueannafang/HSP_toolkit_docs/blob/main/hsp_tool_general_intro.md) as the general introduction and background of this project.
+
+## Version update: A new version of SolvPred has been available. (Check [here]( https://github.com/xueannafang/hsp_toolkit_solv_pred_v_2.0) for SolvPred v2.0)
 
 ## Before start
 
