@@ -219,8 +219,8 @@ This work is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
 To cite this work, please use:
 
-*X. Fang, U. Karatayeva, S. A. A. Siyabi, B. B. Narzary, M. G. Girgin, D. Mukhanov, C. F.J. Faul, N. Fey, E. Gale, MLoc - A python toolkit to predict Hansen solubility parameters of functional materials (manuscript in preparation).*
+X. Fang, E. Gale, N. Fey, C. F.J. Faul, MLoc - a solvent selection framework for data-deficient functional materials preparation (v1.0), 2021, https://github.com/xueannafang/hsp_toolkit_prototype/blob/main/HSP_MLocator.
 
 ## Disclaimer
 
-  - MLoc is under continous tests and improvement. The output only provide suggestion. Results may vary with multi factors in complicated situations. It is the users responsbility to manuallay check the exact experimental performance in different scenarios.
+  - MLoc is under continous tests and improvement. The output only provide suggestion. Results may vary with multi factors in complicated situations. We encourage users to manuallay check the exact experimental performance in different scenarios.
