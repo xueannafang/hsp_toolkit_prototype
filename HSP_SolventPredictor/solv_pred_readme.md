@@ -345,9 +345,7 @@ This work is licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
 To cite this work, please use:
 
-*X. Fang, C. F.J. Faul, N. Fey, E. Gale, SolvPred - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (manuscript in preparation)*
-
-X. Fang, E. Gale, N. Fey, C. F.J. Faul, SolvPred - A python toolkit to predict multi-solvent combinations with target Hansen solubility parameters (v1.0), 2021, https://github.com/xueannafang/hsp_toolkit_prototype.
+X. Fang, E. Gale, N. Fey, C. F.J. Faul, SolvPred - An inverse solvent design toolkit for the prediction of Hansen solubility parameters (v1.0), 2021, https://github.com/xueannafang/hsp_toolkit_prototype/blob/main/HSP_SolventPredictor.
 
 
 
